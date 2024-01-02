@@ -1,5 +1,5 @@
  
-# Hello, I'm [Nitesh Rawal] 👋
+# Hello, I'm Nitesh Rawal 👋
 
 I am a passionate Java backend developer with 2.9 years of experience, specializing in building robust and scalable applications using a variety of technologies. Below is a brief overview of my skills and expertise:
 
@@ -14,7 +14,7 @@ I am a passionate Java backend developer with 2.9 years of experience, specializ
 - **Camunda & BPMN**: Implemented business process automation using Camunda and BPMN (Business Process Model and Notation).
 
 ## 📚 Education
-- **Masters's Of Computer Applicxation**: University of Hyderabad, 2021
+- **Masters's Of Computer Application**: University of Hyderabad, 2021
 
 ## 🌱 What I'm currently learning
 I am always eager to learn and stay updated with the latest technologies. Currently, I am exploring [AWS].
