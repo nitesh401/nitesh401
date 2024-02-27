@@ -1,7 +1,7 @@
  
 # Hello, I'm Nitesh Rawal 👋
 
-I am a passionate Java backend developer with 2.9 years of experience, specializing in building robust and scalable applications using a variety of technologies. Below is a brief overview of my skills and expertise:
+I am a passionate Software Engineer with 3 years of experience in Java Backend Development, specializing in Java, Spring Boot and Microservice. Below is a brief overview of my skills and expertise:
 
 ## 🔧 Skills & Technologies
 - **Java**: Proficient in Java programming with a focus on backend development.
