@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tasheer - Saudi Visa and Travel Solution">
+  <defs>
+    <linearGradient id="bgVisa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3d24"/>
+      <stop offset="55%" stop-color="#0f7a52"/>
+      <stop offset="100%" stop-color="#1f3864"/>
+    </linearGradient>
+    <linearGradient id="passCover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#125c3d"/>
+      <stop offset="100%" stop-color="#0a3826"/>
+    </linearGradient>
+    <radialGradient id="glowVisa" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe9a8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffe9a8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgVisa)"/>
+
+  <!-- arch motif pattern, right side -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2">
+    <path d="M470 300 q60 -90 120 0"/>
+    <path d="M560 300 q60 -90 120 0"/>
+    <path d="M650 300 q60 -90 120 0"/>
+  </g>
+
+  <circle cx="640" cy="120" r="170" fill="url(#glowVisa)"/>
+
+  <!-- flight path + plane -->
+  <g transform="translate(430,70)">
+    <path d="M0 90 Q120 -10 260 60" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 8"/>
+    <g transform="translate(255,55) rotate(25)">
+      <path d="M0 0 L26 4 L2 12 L4 22 L-4 16 L-10 22 L-8 10 L-16 6 Z" fill="#ffffff"/>
+    </g>
+    <circle cx="0" cy="90" r="5" fill="#ffe9a8"/>
+    <circle cx="260" cy="60" r="5" fill="#ffe9a8"/>
+  </g>
+
+  <!-- passport / visa booklet -->
+  <g transform="translate(70,140)">
+    <rect x="-10" y="0" width="190" height="230" rx="14" fill="url(#passCover)" stroke="#ffffff" stroke-opacity="0.2"/>
+    <g transform="translate(85,80)" fill="none" stroke="#ffe9a8" stroke-width="3">
+      <circle cx="0" cy="0" r="34"/>
+      <path d="M-34 0 A34 34 0 0 1 34 0" stroke-opacity="0.6"/>
+    </g>
+    <rect x="10" y="150" width="150" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/>
+    <rect x="10" y="172" width="110" height="10" rx="5" fill="#ffffff" fill-opacity="0.25"/>
+    <!-- visa stamp -->
+    <g transform="translate(120,182) rotate(-18)">
+      <rect x="-34" y="-18" width="68" height="36" rx="6" fill="none" stroke="#ff8a65" stroke-width="3" stroke-opacity="0.85"/>
+      <text x="0" y="6" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ff8a65" text-anchor="middle" opacity="0.9">VISA</text>
+    </g>
+  </g>
+
+  <!-- boarding pass card -->
+  <g transform="translate(300,250)">
+    <rect x="0" y="0" width="150" height="70" rx="10" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.25"/>
+    <rect x="14" y="16" width="70" height="8" rx="4" fill="#ffffff" fill-opacity="0.55"/>
+    <rect x="14" y="34" width="90" height="8" rx="4" fill="#ffffff" fill-opacity="0.3"/>
+    <rect x="14" y="50" width="50" height="8" rx="4" fill="#ffe9a8" fill-opacity="0.8"/>
+  </g>
+
+  <text x="60" y="380" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Tasheer</text>
+  <text x="60" y="412" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#d7f2e3">Saudi visa processing &amp; travel solution</text>
+</svg>

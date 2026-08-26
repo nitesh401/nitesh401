@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="262"
+     viewBox="0 0 490 262" font-family="Consolas, 'Courier New', monospace">
+  <style>
+    .card-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; }
+    .titlebar { fill: #161b22; }
+    .titletext { fill: #c9d1d9; font-size: 13px; font-weight: bold; }
+    .dot { opacity: 0.85; }
+    .key { fill: #39d353; font-size: 13px; font-weight: bold; }
+    .value { fill: #c9d1d9; font-size: 13px; }
+    .row {
+      opacity: 0;
+      transform: translateX(-8px);
+      animation: fadeSlide 0.5s ease-out forwards;
+    }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateX(-8px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+  <rect class="card-bg" x="0.5" y="0.5" width="489" height="261" rx="8" />
+  <rect class="titlebar" x="0.5" y="0.5" width="489" height="30" rx="8" />
+  <rect class="titlebar" x="0.5" y="20" width="489" height="11" />
+  <circle class="dot" cx="20" cy="16" r="5" fill="#ff5f56" />
+  <circle class="dot" cx="38" cy="16" r="5" fill="#ffbd2e" />
+  <circle class="dot" cx="56" cy="16" r="5" fill="#27c93f" />
+  <text x="245.0" y="20" text-anchor="middle" class="titletext">nitesh@github</text>
+  
+    <g class="row" style="animation-delay:0.15s">
+      <text x="20" y="56" class="key">Now</text>
+      <text x="110" y="56" class="value">Software Engineer II @ Deloitte USI</text>
+    </g>
+    <g class="row" style="animation-delay:0.27s">
+      <text x="20" y="82" class="key">Prev</text>
+      <text x="110" y="82" class="value">Software Engineer @ CGI, Assoc. SE @ Techsophy</text>
+    </g>
+    <g class="row" style="animation-delay:0.39s">
+      <text x="20" y="108" class="key">Stack</text>
+      <text x="110" y="108" class="value">Java, Spring Boot, Microservices, Kafka</text>
+    </g>
+    <g class="row" style="animation-delay:0.51s">
+      <text x="20" y="134" class="key">Infra</text>
+      <text x="110" y="134" class="value">Docker, Kubernetes, Azure, Camunda BPM</text>
+    </g>
+    <g class="row" style="animation-delay:0.63s">
+      <text x="20" y="160" class="key">Data</text>
+      <text x="110" y="160" class="value">PostgreSQL, MySQL, MongoDB</text>
+    </g>
+    <g class="row" style="animation-delay:0.75s">
+      <text x="20" y="186" class="key">Education</text>
+      <text x="110" y="186" class="value">MCA, University of Hyderabad, 2021</text>
+    </g>
+    <g class="row" style="animation-delay:0.87s">
+      <text x="20" y="212" class="key">Learning</text>
+      <text x="110" y="212" class="value">AWS</text>
+    </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="688" height="130"
+     viewBox="0 0 688 130" font-family="Consolas, 'Courier New', monospace">
+  <style>
+    .bg { fill: #0d1117; }
+    .row { fill: #c9d1d9; font-size: 14px; letter-spacing: 0px; }
+    .wipe {
+      animation: wipeIn 0.7s steps(24) forwards;
+    }
+    @keyframes wipeIn {
+      from { width: 0; }
+      to   { width: 648px; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="688" height="130" rx="6" />
+  
+    <clipPath id="wipe0">
+      <rect x="0" y="19" width="0" height="14" class="wipe" style="animation-delay:0.00s" />
+    </clipPath>
+    <text x="20" y="30" class="row" clip-path="url(#wipe0)" xml:space="preserve">█   █ █████ █████ █████  ████ █   █       ████   ███  █   █  ███  █     </text>
+    <clipPath id="wipe1">
+      <rect x="0" y="33" width="0" height="14" class="wipe" style="animation-delay:0.25s" />
+    </clipPath>
+    <text x="20" y="44" class="row" clip-path="url(#wipe1)" xml:space="preserve">██  █   █     █   █     █     █   █       █   █ █   █ █   █ █   █ █     </text>
+    <clipPath id="wipe2">
+      <rect x="0" y="47" width="0" height="14" class="wipe" style="animation-delay:0.50s" />
+    </clipPath>
+    <text x="20" y="58" class="row" clip-path="url(#wipe2)" xml:space="preserve">█ █ █   █     █   ████   ███  █████       ████  █████ █ █ █ █████ █     </text>
+    <clipPath id="wipe3">
+      <rect x="0" y="61" width="0" height="14" class="wipe" style="animation-delay:0.75s" />
+    </clipPath>
+    <text x="20" y="72" class="row" clip-path="url(#wipe3)" xml:space="preserve">█  ██   █     █   █         █ █   █       █  █  █   █ ██ ██ █   █ █     </text>
+    <clipPath id="wipe4">
+      <rect x="0" y="75" width="0" height="14" class="wipe" style="animation-delay:1.00s" />
+    </clipPath>
+    <text x="20" y="86" class="row" clip-path="url(#wipe4)" xml:space="preserve">█   █ █████   █   █████ ████  █   █       █   █ █   █ █   █ █   █ █████ </text>
+</svg>
