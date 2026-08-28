@@ -1,0 +1,14 @@
+{
+  "title": "Skill Radar",
+  "_comment": "Self-rated, 0-100. Edit freely; the workflow redraws the chart on every push.",
+  "axes": [
+    { "label": "Java",              "value": 90 },
+    { "label": "Spring Boot",       "value": 88 },
+    { "label": "Microservices",     "value": 85 },
+    { "label": "Kafka",             "value": 75 },
+    { "label": "SQL / NoSQL",       "value": 78 },
+    { "label": "Docker / K8s",      "value": 70 },
+    { "label": "Azure",             "value": 68 },
+    { "label": "React",             "value": 55 }
+  ]
+}
