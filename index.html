@@ -228,6 +228,23 @@
             transform:none !important;
             pointer-events:auto !important;
         }
+
+        /* FIX: #v-card #profile (the 400px photo) is an absolutely
+           positioned SIBLING of .card-content, not a child of it - so the
+           z-index:2 on .links above only ever competed against other
+           children of .card-content, and never actually got compared to
+           #profile's z-index:1. On viewport widths where the bio text is
+           short enough that the social icon row falls within the photo's
+           vertical span, the (invisible) rest of the photo's box was
+           sitting on top and silently swallowing clicks meant for the
+           icons - which is why it looked fine on some screens/devices and
+           silently failed to navigate on others. Giving .card-content its
+           own positioned stacking context with a higher z-index than
+           #profile guarantees the whole content column - links included -
+           always renders (and receives clicks) above the photo. */
+        #v-card .card-content { position:relative; z-index:3; }
+        #v-card #profile { pointer-events:none; }
+        #v-card #profile .add-btn { pointer-events:auto; }
     
 /* ===== ENHANCED SKILLS SECTION ===== */
 #skills { position:relative; overflow:hidden; }
@@ -444,9 +461,9 @@
                                     <img alt="profile-image" class="img-responsive" src="images/me.jpeg">
                                     <div class="slant"></div>
                                     <div class="btn-floating btn-large add-btn">
-                                        <a
-                                            href="#">
-                                            <i class="material-icons">contact_mail</i></div></a>
+                                        <a href="#contact">
+                                            <i class="material-icons">contact_mail</i></a>
+                                    </div>
                                 </div>
 
                                 <div class="card-content">
@@ -591,7 +608,7 @@
                         <div id="about-btn" class="card-action">
                             <div class="about-btn">
 
-                                <a href="#" target="_blanc"
+                                <a href="#" target="_blank"
                                     class="btn waves-effect">
                                     Download Resume </a>
 
@@ -1597,6 +1614,29 @@
                 target.style.overflow="hidden";
                 target.appendChild(ripple);
                 setTimeout(function(){ripple.remove();},650);
+            });
+
+            /* FIX: guaranteed navigation for the profile social icons.
+               These sit in a card layout where an absolutely positioned
+               sibling (the profile photo) can, on some viewport widths,
+               end up stacked above them and swallow the click before the
+               anchor's native default action runs. Rather than rely on
+               that never happening again, handle these explicitly: on any
+               click that lands on or inside a ".social" link, open its
+               href ourselves. This still requires a real click (so it's
+               a trusted user gesture and popup blockers won't touch it),
+               and works no matter what else on the page is misbehaving. */
+            document.querySelectorAll("#v-card .links a.social").forEach(function(link){
+                link.addEventListener("click", function(e){
+                    var href = link.getAttribute("href");
+                    if (!href) return;
+                    e.preventDefault();
+                    if (link.getAttribute("target") === "_blank") {
+                        window.open(href, "_blank", "noopener,noreferrer");
+                    } else {
+                        window.location.href = href;
+                    }
+                });
             });
 
             /* Premium background mouse parallax */
