@@ -35,8 +35,8 @@ $ cat about.txt
 Hi, I'm **Nitesh Rawal**. I'm a backend engineer who spends most of his time inside Java and
 Spring Boot, designing microservices that actually hold up in production.
 
-- 5 years building backend systems - currently **SDE-2 at Deloitte USI**, owning services on an
-  Entitlement & Licensing Management platform built from scratch
+- Building backend systems since 2021 — currently **Software Engineer II at Deloitte USI**
+  (April 2025–present), contributing to an Entitlement & Licensing Management platform
 - Day to day: **Java, Spring Boot, microservices, REST/GraphQL APIs, Kafka, PostgreSQL, MongoDB**
 - Writing daily in **[TheBlueprintVoyager](https://github.com/nitesh401/TheBlueprintVoyager)** -
   Java design patterns, Spring internals, and system design, five minutes at a time
