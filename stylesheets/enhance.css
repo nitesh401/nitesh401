@@ -56,6 +56,11 @@ textarea:focus-visible {
 #home #v-card-holder {
   animation: enhFadeUp 0.9s ease both;
 }
+/* Section titles: ensure consistent alignment across screens */
+.section-title h4, .section-title h2 { text-align:center; }
+/* V-card name/role spacing */
+#v-card .info-headings h4 { margin-bottom:6px; display:block; }
+#v-card .info-headings h6 { margin-top:0; display:block; color:rgba(255,255,255,0.85); }
 
 /* ---------- Navigation micro-interactions ---------- */
 #navigation ul li a,
@@ -241,6 +246,7 @@ button[type="submit"]:hover {
   .section-title h2 {
     font-size: 21px;
     letter-spacing: 1px;
+    text-align: center;
   }
 
   #blog .blog .image {

@@ -1,0 +1,15 @@
+/* Subtle cursor glow styles (used by index.js inline logic) */
+.cursor-glow {
+  position: fixed;
+  left: 50%; top: 50%;
+  width: 220px; height: 220px; border-radius: 40% 60% 55% 45%;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  filter: blur(40px);
+  background: radial-gradient(circle at 40% 30%, rgba(78,224,138,0.16), rgba(78,224,138,0.06) 20%, transparent 48%), radial-gradient(circle at 70% 70%, rgba(79,136,255,0.08), transparent 46%);
+  opacity: 0; transition: opacity 220ms linear, transform 120ms linear;
+  z-index: 99998;
+}
+body.pointer-ready .cursor-glow { opacity: 1; }
+@media (max-width: 991px), (prefers-reduced-motion: reduce) { .cursor-glow { display:none !important; } }

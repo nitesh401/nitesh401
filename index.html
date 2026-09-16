@@ -56,6 +56,7 @@
 
     <!-- ENHANCEMENTS: animation & responsive polish -->
     <link href="stylesheets/enhance.css" rel="stylesheet">
+    <link href="stylesheets/cursor_glow.css" rel="stylesheet">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1406,7 +1407,7 @@
             var finalHobbies=document.getElementById("interest-card");
             if(finalHobbies){
                 finalHobbies.addEventListener("mousemove",function(e){var r=finalHobbies.getBoundingClientRect();finalHobbies.style.setProperty("--hobby-x",(e.clientX-r.left)+"px");finalHobbies.style.setProperty("--hobby-y",(e.clientY-r.top)+"px");});
-                finalHobbies.querySelectorAll(".hobby-tile").forEach(function(tile){tile.addEventListener("mousemove",function(e){var r=tile.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tile.style.transform="perspective(800px) rotateX("+(-y*7)+"deg) rotateY("+(x*7)+"deg) translateY(-5px) scale(1.02)";});tile.addEventListener("mouseleave",function(){tile.style.transform="";});});
+                finalHobbies.querySelectorAll(".hobby-tile").forEach(function(tile){tile.addEventListener("mousemove",function(e){var r=tile.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tile.style.transform="perspective(800px) rotateX("+(-y*3.5)+"deg) rotateY("+(x*3.5)+"deg) translateY(-4px) scale(1.01)";});tile.addEventListener("mouseleave",function(){tile.style.transform="";});});
             }
 
             /* Skills viewport state */
@@ -1450,20 +1451,26 @@
             var pointerFine = window.matchMedia("(pointer:fine)").matches;
             if (pointerFine) document.body.classList.add("pointer-ready");
 
+            /* Subtle cursor glow that follows the pointer (no intrusive dot/ring) */
             function animateCursor() {
-                ringX += (mouseX-ringX)*.16;
-                ringY += (mouseY-ringY)*.16;
-                if (dot) { dot.style.left=mouseX+"px"; dot.style.top=mouseY+"px"; }
-                if (ring) { ring.style.left=ringX+"px"; ring.style.top=ringY+"px"; }
+                ringX += (mouseX-ringX)*.12; // softer follow
+                ringY += (mouseY-ringY)*.12;
+                if (dot) { /* intentionally left hidden */ }
+                if (ring) { /* intentionally left hidden */ }
                 requestAnimationFrame(animateCursor);
             }
             if (pointerFine) {
                 animateCursor();
                 document.addEventListener("mousemove", function(e) {
                     mouseX=e.clientX; mouseY=e.clientY;
-                    if (glow) { glow.style.left=mouseX+"px"; glow.style.top=mouseY+"px"; }
+                    if (glow) {
+                        // smoother placement for the glow
+                        glow.style.transform = 'translate3d(' + (mouseX) + 'px,' + (mouseY) + 'px,0)';
+                        glow.style.opacity = 1;
+                    }
                 }, {passive:true});
-                document.querySelectorAll("a, button, .hobby-tile, .ai-pill, .skillbar, .social").forEach(function(el){
+                // reduce hover-triggered class toggles to avoid flicker on complex elements
+                document.querySelectorAll("a, button, .social").forEach(function(el){
                     el.addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover");});
                     el.addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover");});
                 });
@@ -1505,7 +1512,7 @@
                     tile.addEventListener("mousemove",function(e){
                         var r=tile.getBoundingClientRect();
                         var x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-                        tile.style.transform="perspective(700px) rotateX("+(-y*8)+"deg) rotateY("+(x*8)+"deg) translateY(-5px)";
+                        tile.style.transform="perspective(700px) rotateX("+(-y*3.5)+"deg) rotateY("+(x*3.5)+"deg) translateY(-4px)";
                     });
                     tile.addEventListener("mouseleave",function(){tile.style.transform="";});
                 });
@@ -1582,13 +1589,13 @@
                 setTimeout(function(){ripple.remove();},650);
             });
 
-            /* Premium background mouse parallax */
+            /* Premium background mouse parallax: slower, subtler movement */
             var ambientBg=document.getElementById("ambient-bg");
             if(ambientBg && pointerFine){
                 var bgTargetX=50,bgTargetY=45,bgX=50,bgY=45;
                 window.addEventListener("mousemove",function(e){ bgTargetX=(e.clientX/window.innerWidth)*100; bgTargetY=(e.clientY/window.innerHeight)*100; });
                 function animateBg(){
-                    bgX += (bgTargetX-bgX)*0.035; bgY += (bgTargetY-bgY)*0.035;
+                    bgX += (bgTargetX-bgX)*0.02; bgY += (bgTargetY-bgY)*0.02; // slower easing
                     ambientBg.style.setProperty("--bg-mx",bgX+"%");
                     ambientBg.style.setProperty("--bg-my",bgY+"%");
                     requestAnimationFrame(animateBg);
@@ -1602,11 +1609,12 @@
                 var ctx=canvas.getContext("2d"), particles=[], mouseX=innerWidth/2, mouseY=innerHeight/2, count=Math.min(115,Math.floor(window.innerWidth/14));
                 function resizeCanvas(){canvas.width=window.innerWidth*devicePixelRatio;canvas.height=window.innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);}
                 resizeCanvas(); window.addEventListener("resize",resizeCanvas); window.addEventListener("mousemove",function(e){mouseX=e.clientX;mouseY=e.clientY;});
-                for(var p=0;p<count;p++) particles.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.8+.5,phase:Math.random()*Math.PI*2});
+                for(var p=0;p<count;p++) particles.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.16,vy:(Math.random()-.5)*.16,r:Math.random()*1.6+.4,phase:Math.random()*Math.PI*2});
                 function drawParticles(){
                     ctx.clearRect(0,0,innerWidth,innerHeight);
                     particles.forEach(function(a){
-                        a.x+=a.vx + (mouseX-a.x)*0.000025; a.y+=a.vy + (mouseY-a.y)*0.000025; a.phase+=0.01;
+                        // remove direct mouse attraction for a calmer field; particles drift on their own
+                        a.x+=a.vx; a.y+=a.vy; a.phase+=0.01;
                         if(a.x<0||a.x>innerWidth)a.vx*=-1;
                         if(a.y<0||a.y>innerHeight)a.vy*=-1;
                         ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,Math.PI*2);ctx.fillStyle="rgba(125,210,255,.55)";ctx.fill();
