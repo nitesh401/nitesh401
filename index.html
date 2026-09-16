@@ -373,6 +373,11 @@
     <style>
         .click-ripple { position:absolute; width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.35); transform:translate(-50%,-50%) scale(1); animation:clickRipple .6s ease-out forwards; pointer-events:none; }
         @keyframes clickRipple { to { transform:translate(-50%,-50%) scale(18); opacity:0; } }
+
+        /* Typewriter cursor styling */
+        .typewriter-cursor { display:inline-block; margin-left:8px; opacity:1; color: var(--accent, #4ee08a); font-weight:700; animation:tw-blink 1s steps(2,end) infinite; }
+        @keyframes tw-blink { 50% { opacity:0; } }
+        @media (prefers-reduced-motion: reduce) { .typewriter-cursor { animation: none; } }
     </style>
 </head>
 
@@ -1378,6 +1383,7 @@
 
             /* Typewriter */
             var typewriterEl = document.getElementById("typewriter-heading");
+            var cursorEl = document.querySelector(".typewriter-cursor");
             if (typewriterEl) {
                 var fullText = "Know more about myself";
                 var i = 0;
@@ -1386,6 +1392,13 @@
                     if (i <= fullText.length) {
                         typewriterEl.textContent = fullText.slice(0, i++);
                         setTimeout(typeNext, 65);
+                    } else {
+                        // typing finished — hide the cursor gracefully
+                        if (cursorEl) {
+                            cursorEl.style.transition = 'opacity 240ms ease';
+                            cursorEl.style.opacity = '0';
+                            setTimeout(function(){ if(cursorEl) cursorEl.style.display = 'none'; }, 260);
+                        }
                     }
                 }
                 if ("IntersectionObserver" in window) {
