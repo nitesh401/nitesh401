@@ -195,32 +195,33 @@
         });
 
 
-        /***MAIL SCRIPT***/ // Upadted in V. 1.1
-        $('form#contact-form').on('submit', function (e) {
-            e.preventDefault(); //Prevents default submit
-            var form = $(this);
-            $("#submit").attr('disabled', 'disabled'); //Disable the submit button on click
-            var post_data = form.serialize(); //Serialized the form data 
-            $('div#form-loader').removeClass('is-hidden').fadeIn(500);
-            $.ajax({
-                type: 'POST',
-                url: 'php/mail_handler.php', // Form script
-                data: post_data
-            })
-                .done(function () {
-                    $('div#form-loader').fadeOut(500);
-                    Materialize.toast('Message Sent! I will contact you shortly, Thanks', 4000);
-                    $("form#contact-form")[0].reset();
-                    Materialize.updateTextFields(); // Rest floating labels
-                    $("#submit").removeAttr('disabled', 'disabled'); // Enable submit button
+        /***MAIL SCRIPT***/ // Updated to use Formspree – replace REPLACE_WITH_YOUR_ID with your form id
+                var FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_ID';
+                $('form#contact-form').on('submit', function (e) {
+                    e.preventDefault(); //Prevents default submit
+                    var form = $(this);
+                    $("#submit").attr('disabled', 'disabled'); //Disable the submit button on click
+                    var post_data = form.serialize(); //Serialized the form data 
+                    $('div#form-loader').removeClass('is-hidden').fadeIn(500);
+                    $.ajax({
+                        type: 'POST',
+                        url: FORMSPREE_ENDPOINT, // Formspree endpoint
+                        data: post_data
+                    })
+                        .done(function () {
+                            $('div#form-loader').fadeOut(500);
+                            Materialize.toast('Message Sent! I will contact you shortly, Thanks', 4000);
+                            $("form#contact-form")[0].reset();
+                            Materialize.updateTextFields(); // Rest floating labels
+                            $("#submit").removeAttr('disabled', 'disabled'); // Enable submit button
 
-                })
-                .fail(function () {
-                    $('div#form-loader').fadeOut(500);
-                    Materialize.toast('Sorry! Something Wrong, Try Again', 4000);
-                    $("#submit").removeAttr('disabled', 'disabled'); // Enable submit button
+                        })
+                        .fail(function () {
+                            $('div#form-loader').fadeOut(500);
+                            Materialize.toast('Sorry! Something Wrong, Try Again', 4000);
+                            $("#submit").removeAttr('disabled', 'disabled'); // Enable submit button
+                        });
                 });
-        });
 
 
     });
