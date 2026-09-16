@@ -196,7 +196,7 @@
 
 
         /***MAIL SCRIPT***/ // Updated to use Formspree – replace REPLACE_WITH_YOUR_ID with your form id
-                var FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_ID';
+                var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xvkgpwrl';
                 $('form#contact-form').on('submit', function (e) {
                     e.preventDefault(); //Prevents default submit
                     var form = $(this);
