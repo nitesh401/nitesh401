@@ -296,9 +296,25 @@ button[type="submit"]:hover {
    card.  These rules keep the content and links above that decorative layer. */
 #home .header-background #v-card-holder #v-card {
   isolation: isolate;
-  height: auto;
-  min-height: 400px;
+  height: auto !important;
+  min-height: 0 !important; /* allow content to determine height to avoid gaps */
   overflow: visible;
+}
+
+/* Ensure profile image preserves aspect and fills its box without creating gaps */
+#home .header-background #v-card-holder #v-card #profile img {
+  width: 400px !important;
+  height: 400px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+@media screen and (max-width: 767px) {
+  #home .header-background #v-card-holder #v-card #profile img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+  }
 }
 
 #home .header-background #v-card-holder #v-card .card-content {
