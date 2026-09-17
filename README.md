@@ -32,15 +32,11 @@
 $ cat about.txt
 ```
 
-Hi, I'm **Nitesh Rawal**. I'm a backend engineer who spends most of his time inside Java and
-Spring Boot, designing microservices that actually hold up in production.
+Hi, I'm **Nitesh Rawal**. I'm a backend engineer specializing in Java and Spring Boot, focused on designing resilient, scalable microservices and distributed systems.
 
-- Building backend systems since 2021 — currently **Software Engineer II at Deloitte USI**
-  (April 2025–present), contributing to an Entitlement & Licensing Management platform
-- Day to day: **Java, Spring Boot, microservices, REST/GraphQL APIs, Kafka, PostgreSQL, MongoDB**
-- Writing daily in **[TheBlueprintVoyager](https://github.com/nitesh401/TheBlueprintVoyager)** -
-  Java design patterns, Spring internals, and system design, five minutes at a time
-- Fun fact: **I'd rather design the service boundary right the first time than refactor it twice.**
+- Building backend systems since 2021 — currently **Software Engineer II at Deloitte USI** (April 2025–present), contributing to the Entitlement & Licensing Management platform.
+- Daily stack: **Java, Spring Boot, Spring WebFlux, Microservices, Kafka, REST/GraphQL, PostgreSQL, MongoDB, Docker, Kubernetes, Azure**.
+- Fun fact: **I prefer getting service boundaries right up front rather than refactoring later.**
 
 <br>
 
