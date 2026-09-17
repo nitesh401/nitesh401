@@ -478,7 +478,7 @@
                                     <!-- NAME & STATUS -->
                                     <div class="info-headings">
                                         <h4 class="text-uppercase left">Nitesh Rawal</h4>
-                                        <h6 class="text-capitalize left">Java Backend Developer</h6>
+                                        <h6 class="text-capitalize left"><span id="status-typewriter"></span><span id="status-cursor" class="typewriter-cursor">|</span></h6>
                                     </div>
 
                                     <!-- CONTACT INFO -->
@@ -1409,6 +1409,34 @@
                     }, {threshold:.5});
                     twObs.observe(typewriterEl);
                 } else { typeNext(); }
+
+            /* Status line typewriter (cycles phrases) */
+            var statusEl = document.getElementById('status-typewriter');
+            var statusCursor = document.getElementById('status-cursor');
+            if (statusEl) {
+                var phrases = ["Java Backend Developer","Spring Boot & Microservices","01101010 01100001 01110110 01100001"];
+                var pIndex = 0, chIndex = 0, deleting = false;
+                function statusTick(){
+                    var current = phrases[pIndex];
+                    if (!deleting) {
+                        statusEl.textContent = current.slice(0, ++chIndex);
+                        if (chIndex === current.length) { deleting = true; setTimeout(statusTick, 900); return; }
+                        setTimeout(statusTick, 90);
+                    } else {
+                        statusEl.textContent = current.slice(0, --chIndex);
+                        if (chIndex === 0) { deleting = false; pIndex = (pIndex+1)%phrases.length; setTimeout(statusTick, 350); return; }
+                        setTimeout(statusTick, 45);
+                    }
+                }
+                // start when v-card is visible (same pattern as other observers)
+                if ("IntersectionObserver" in window) {
+                    var stObs = new IntersectionObserver(function(entries, obs){
+                        if (entries[0].isIntersecting) { statusTick(); obs.disconnect(); }
+                    }, {threshold: 0.2});
+                    stObs.observe(document.getElementById('v-card'));
+                } else { statusTick(); }
+            }
+
             }
 
             /* Final Skills + Hobbies interactions */
