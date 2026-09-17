@@ -8,9 +8,9 @@
 
 <br>
 
-<!-- NAME / TAGLINE - animated typing -->
+<!-- NAME / TAGLINE - animated typing (local SVG embed) -->
 <a href="https://github.com/nitesh401">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=4EE08A&center=true&vCenter=true&width=720&lines=Nitesh+Rawal;Java+Backend+Developer;Spring+Boot+%26+Microservices;010101010101010101010101010" alt="typing banner">
+  <img src="assets/readme-typing.svg" alt="typing banner" width="720">
 </a>
 
 <br>
