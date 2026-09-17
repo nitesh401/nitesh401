@@ -377,9 +377,31 @@ button[type="submit"]:hover {
 }
 
 /* Sidebar avatar styling */
-.logo-flat { display:flex; align-items:center; justify-content:center; padding:12px 0; }
+.logo-flat { display:flex; align-items:center; justify-content:center; padding:12px 0; /* fallback background in case <img> fails */ background-image: url('../images/me.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; }
 .logo-flat .sidebar-avatar { width:72px; height:72px; border-radius:50%; object-fit:cover; display:block; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
 @media (max-width:767px) { .logo-flat .sidebar-avatar { width:56px; height:56px; } }
+
+/* Ensure image elements are visible and not unintentionally hidden by other rules */
+#home .menu .logo-flat img,
+#home .header-background #v-card-holder #v-card #profile img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Provide a background fallback for the main profile container as well */
+#home .header-background #v-card-holder #v-card #profile {
+  background-image: url('../images/me.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Slight inset to prevent the background from bleeding to the slant overlay area */
+#home .header-background #v-card-holder #v-card #profile .slant { mix-blend-mode: multiply; }
 
 
 #home .header-background #v-card-holder #v-card #profile .add-btn {
