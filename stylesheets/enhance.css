@@ -59,11 +59,16 @@ textarea:focus-visible {
 /* Section titles: ensure consistent alignment across screens */
 .section-title h4, .section-title h2 { text-align:center; }
 /* V-card name/role spacing */
-#v-card .info-headings h4 { margin-bottom:12px; display:block; }
-#v-card .info-headings h6 { margin-top:0; display:block; color:rgba(255,255,255,0.92); font-weight:600; }
+#v-card .info-headings h4 { margin-bottom:6px !important; display:block; }
+#v-card .info-headings h6 { margin-top:0 !important; display:block; color:rgba(255,255,255,0.92); font-weight:600; }
+
+/* Reduce top spacing of headings to remove large gap between name and status */
+#home .header-background #v-card-holder #v-card .info-headings { margin-top: 8px !important; }
+#home .header-background #v-card-holder #v-card .info-headings h4 { margin-bottom:6px !important; }
+#home .header-background #v-card-holder #v-card .info-headings h6 { margin-top:0 !important; }
 
 /* status typewriter smaller size and spacing */
-#status-typewriter { font-size: 1.05rem; letter-spacing: 0.2px; }
+#status-typewriter { font-size: 1.05rem; letter-spacing: 0.2px; display:inline-block; vertical-align:middle; }
 #status-cursor { margin-left:8px; color: var(--accent, #4ee08a); font-weight:700; }
 @media (max-width: 767px) { #status-typewriter { display:block; margin-top:6px; } }
 
