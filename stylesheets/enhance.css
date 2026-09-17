@@ -380,16 +380,21 @@ button[type="submit"]:hover {
 .logo-flat { display:flex; align-items:center; justify-content:center; padding:8px 0 !important; background: transparent !important; }
 /* Use a compact square avatar in the sidebar so it looks consistent */
 #home .menu .logo-flat img, .logo-flat .sidebar-avatar {
-  width: 72px !important;
-  height: 72px !important;
+  width: 110px !important;
+  height: 110px !important;
   padding: 0 !important;
   object-fit: cover !important;
   display: block !important;
   border-radius: 8px !important; /* subtle rounded square */
   box-shadow: 0 6px 18px rgba(0,0,0,0.18) !important;
 }
+/* Tablet */
+@media (max-width:1199px) and (min-width:768px) {
+  #home .menu .logo-flat img, .logo-flat .sidebar-avatar { width:92px !important; height:92px !important; }
+}
+/* Mobile */
 @media (max-width:767px) {
-  #home .menu .logo-flat img, .logo-flat .sidebar-avatar { width:56px !important; height:56px !important; }
+  #home .menu .logo-flat img, .logo-flat .sidebar-avatar { width:72px !important; height:72px !important; }
 }
 
 /* Ensure image elements are visible and not unintentionally hidden by other rules */
