@@ -13,3 +13,24 @@
 }
 body.pointer-ready .cursor-glow { opacity: 1; }
 @media (max-width: 991px), (prefers-reduced-motion: reduce) { .cursor-glow { display:none !important; } }
+
+/* ===== Cursor sparks (no ring/circle) ===== */
+.cursor-spark {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 6px;
+  transform: translateZ(0) scale(1);
+  mix-blend-mode: screen;
+  opacity: 0.95;
+  z-index: 99999;
+  filter: blur(0.6px);
+}
+.cursor-spark.go {
+  animation: sparkUp 700ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+@keyframes sparkUp {
+  0% { opacity: 0.95; transform: translateY(0) scale(1) rotate(0deg); }
+  30% { opacity: 0.85; }
+  100% { opacity: 0; transform: translateY(-28px) scale(1.6) rotate(25deg); }
+}
+@media (max-width:991px), (prefers-reduced-motion: reduce) { .cursor-spark { display:none !important; } }

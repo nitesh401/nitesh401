@@ -223,6 +223,25 @@
                         });
                 });
 
+        // Subtle cursor sparks on mouse move (no ring/circle). Disabled on touch/reduced-motion.
+        if (!window.matchMedia('(pointer: coarse)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            var lastMove = 0;
+            var THROTTLE = 18;
+            $(window).on('mousemove', function (e) {
+                var now = Date.now();
+                if (now - lastMove < THROTTLE) return;
+                lastMove = now;
+                var x = e.clientX, y = e.clientY;
+                var spark = $('<div class="cursor-spark"></div>');
+                var size = 8 + Math.floor(Math.random()*10);
+                spark.css({ width: size+'px', height: size+'px', left: (x - size/2)+'px', top: (y - size/2)+'px', background: 'linear-gradient(90deg, rgba(78,224,138,0.98), rgba(79,136,255,0.92))' });
+                $('body').append(spark);
+                // trigger animation
+                setTimeout(function(){ spark.addClass('go'); }, 5);
+                // remove after animation
+                spark.on('animationend webkitAnimationEnd', function(){ $(this).remove(); });
+            });
+        }
 
     });
 
