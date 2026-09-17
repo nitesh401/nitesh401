@@ -373,7 +373,7 @@ button[type="submit"]:hover {
 #home .header-background #v-card-holder #v-card #profile {
   z-index: 1;
   pointer-events: none;
-  display: none !important; /* hide large profile image since sidebar uses it */
+  display: block !important; /* restored main profile image; sidebar still uses avatar */
 }
 
 /* Sidebar avatar styling */
