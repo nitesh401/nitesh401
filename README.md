@@ -35,8 +35,11 @@ $ cat about.txt
 Hi, I'm **Nitesh Rawal**. I'm a backend engineer specializing in Java and Spring Boot, focused on designing resilient, scalable microservices and distributed systems.
 
 - Building backend systems since 2021 — currently **Software Engineer II at Deloitte USI** (April 2025–present), contributing to the Entitlement & Licensing Management platform.
-- Daily stack: **Java, Spring Boot, Spring WebFlux, Microservices, Kafka, REST/GraphQL, PostgreSQL, MongoDB, Docker, Kubernetes, Azure**.
-- Fun fact: **I prefer getting service boundaries right up front rather than refactoring later.**
+- Java backend (core): **Java 11/17/21, Spring Boot, Spring WebFlux, Spring Security, Spring Data / Hibernate, Micronaut/Quarkus, REST & GraphQL, Apache Kafka, gRPC, JDBC, PostgreSQL/MySQL/Oracle, MongoDB, Redis, JUnit/Mockito, Maven/Gradle.**
+
+- DevOps & infra: **Docker, Kubernetes (+Helm), Terraform, Ansible, Jenkins, GitHub Actions, ArgoCD, Docker Compose, Prometheus + Grafana, Azure/AWS/GCP, Helm.**
+
+- Claude AI (Anthropic) — how used: **Claude for summarization, code review, conversational assistants, RAG (embeddings + retrieval), test-case generation. Integrate via Claude REST API/SDK, secure API keys, prompt engineering and moderation, optionally combine with vector DBs (e.g., Pinecone, Milvus) for context.**
 
 <br>
 
