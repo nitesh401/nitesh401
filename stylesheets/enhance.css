@@ -373,7 +373,14 @@ button[type="submit"]:hover {
 #home .header-background #v-card-holder #v-card #profile {
   z-index: 1;
   pointer-events: none;
+  display: none !important; /* hide large profile image since sidebar uses it */
 }
+
+/* Sidebar avatar styling */
+.logo-flat { display:flex; align-items:center; justify-content:center; padding:12px 0; }
+.logo-flat .sidebar-avatar { width:72px; height:72px; border-radius:50%; object-fit:cover; display:block; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+@media (max-width:767px) { .logo-flat .sidebar-avatar { width:56px; height:56px; } }
+
 
 #home .header-background #v-card-holder #v-card #profile .add-btn {
   pointer-events: auto;
