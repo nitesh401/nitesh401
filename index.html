@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- seo -->
     <meta name="author" content="Nitesh Rawal">
-    <meta name="description" content="Nitesh Rawal — Software Engineer II specializing in Java, Spring Boot, microservices, and distributed systems.">
-    <meta name="keywords" content="Nitesh Rawal, software engineer, Java, Spring Boot, microservices, Hyderabad">
+    <meta name="description" content="Nitesh Rawal — Software Engineer II building reliable Java, Spring Boot, microservices, and AI-assisted systems.">
+    <meta name="keywords" content="Nitesh Rawal, software engineer, Java, Spring Boot, microservices, distributed systems, Hyderabad">
     <link rel="canonical" href="https://niteshrawal.is-a.dev/">
 
     <!-- open graph -->
     <meta property="og:title" content="Nitesh Rawal | Software Engineer II">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://niteshrawal.is-a.dev/images/me.jpeg">
-    <meta property="og:description" content="Software Engineer II specializing in Java, Spring Boot, microservices, and distributed systems.">
+    <meta property="og:description" content="Software Engineer II building reliable Java, Spring Boot, microservices, and AI-assisted systems.">
     <meta property="og:url" content="https://niteshrawal.is-a.dev/">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Nitesh Rawal">
@@ -28,7 +28,7 @@
 
 
 
-    <title>Nitesh Rawal | Portfolio</title>
+    <title>Nitesh Rawal | Software Engineer II</title>
 
     <!-- GOOGLE FONT -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
@@ -414,7 +414,6 @@
     <div id="mouse-dot" aria-hidden="true"></div>
     <div id="mouse-ring" aria-hidden="true"></div>
 
-
     <!--==========================================
                   PRE-LOADER
 ===========================================-->
@@ -441,6 +440,8 @@
 
             <!--MENU-->
             <div id="menu-options" class="menu-wrap">
+
+                <button id="portfolio-theme-toggle" class="portfolio-theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle light and dark theme"><i class="fa fa-sun-o"></i></button>
 
                 <!--PERSONAL LOGO (use profile image) -->
                 <div class="logo-flat">
@@ -471,6 +472,10 @@
         </nav>
 
         <div class="header-background section">
+            <video id="portfolio-background-video" class="portfolio-background-video" autoplay muted loop playsinline poster="images/me.jpeg" aria-hidden="true">
+                <source src="https://videos.pexels.com/video-files/3129595/3129595-hd_1920_1080_25fps.mp4" type="video/mp4">
+            </video>
+            <canvas id="motion-canvas" class="portfolio-stage" aria-label="Interactive 3D portfolio background"></canvas>
             <div id="v-card-holder">
                 <div class="container">
                     <div class="row">
@@ -493,7 +498,7 @@
 
                                     <!-- NAME & STATUS -->
                                     <div class="info-headings">
-                                        <h4 class="text-uppercase left">Nitesh Rawal</h4>
+                                        <h4 id="name-typewriter" class="text-uppercase left" data-text="Nitesh Rawal">Nitesh Rawal</h4>
                                         <h6 class="text-capitalize left"><span id="status-typewriter"></span><span id="status-cursor" class="typewriter-cursor">|</span></h6>
                                     </div>
 
@@ -1343,6 +1348,7 @@
     <script src="javascript/scrollreveal.min.js"></script>
     <script src="javascript/jquery.touchSwipe.min.js"></script>
     <script src="javascript/custom.js"></script>
+    <script type="module" src="javascript/motion.js"></script>
 
     <!-- ================== ENHANCED INTERACTION SCRIPT ================== -->
     <script>
