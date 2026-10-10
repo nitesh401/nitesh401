@@ -19,9 +19,8 @@
 <a href="https://www.linkedin.com/in/nitesh-rawal-50923b199/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="mailto:nitesh.rawal401@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 <a href="https://niteshrawal.is-a.dev/"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
-<a href="https://nitesh401.github.io/nitesh.rawal/"><img src="https://img.shields.io/badge/3D_Portfolio-4f8cff?style=for-the-badge&logo=githubpages&logoColor=white" alt="3D Portfolio"></a>
+<a href="https://nitesh401.github.io/nitesh.rawal/"><img src="https://img.shields.io/badge/3D_Portfolio-4f8cff?style=for-the-badge&logo=github&logoColor=white" alt="3D Portfolio"></a>
 
-<img src="https://komarev.com/ghpvc/?username=nitesh401&style=flat&color=39d353&label=profile+views" alt="profile views">
 
 </div>
 
