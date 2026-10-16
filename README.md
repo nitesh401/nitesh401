@@ -153,11 +153,10 @@ Hi, I'm **Nitesh Rawal**. I'm a backend engineer specializing in Java and Spring
 
 <sub>
 
-| project | live | stack |
+| Project | Live | Stack |
 |---|---|---|
-| **[TheBlueprintVoyager](https://github.com/nitesh401/TheBlueprintVoyager)** | [nitesh401.github.io/TheBlueprintVoyager](https://nitesh401.github.io/TheBlueprintVoyager/) | `Java` `Spring Boot` `System Design` |
-
-| **[JAVA DSA ALGO](https://nitesh401.github.io/java-dsa-visual-lab/)** | [nitesh401.github.io/java-dsa-visual-lab](https://nitesh401.github.io/java-dsa-visual-lab/) | `Java` `Dsa` `Algo` |
+| **[TheBlueprintVoyager](https://github.com/nitesh401/TheBlueprintVoyager)** | [Live site](https://nitesh401.github.io/TheBlueprintVoyager/) | `Java` `Spring Boot` `System Design` |
+| **[JAVA DSA ALGO](https://github.com/nitesh401/java-dsa-visual-lab)** | [Live site](https://nitesh401.github.io/java-dsa-visual-lab/) | `Java` `DSA` `Algorithms` |
 
 </sub>
 
