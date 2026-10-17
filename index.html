@@ -1,1727 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- seo -->
-    <meta name="author" content="Nitesh Rawal">
-    <meta name="description" content="Nitesh Rawal — Software Engineer II building reliable Java, Spring Boot, microservices, and AI-assisted systems.">
-    <meta name="keywords" content="Nitesh Rawal, software engineer, Java, Spring Boot, microservices, distributed systems, Hyderabad">
-    <link rel="canonical" href="https://niteshrawal.is-a.dev/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nitesh Rawal — Java Backend Engineer</title>
+  <meta name="description" content="Nitesh Rawal, Software Engineer II. Java backend engineering, microservices, Kafka, Kubernetes and cloud — from first API to production.">
+  <meta name="author" content="Nitesh Rawal">
+  <meta name="theme-color" content="#07080b">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://niteshrawal.is-a.dev/">
 
-    <!-- open graph -->
-    <meta property="og:title" content="Nitesh Rawal | Software Engineer II">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://niteshrawal.is-a.dev/images/me.jpeg">
-    <meta property="og:description" content="Software Engineer II building reliable Java, Spring Boot, microservices, and AI-assisted systems.">
-    <meta property="og:url" content="https://niteshrawal.is-a.dev/">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Nitesh Rawal">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nitesh Rawal">
+  <meta property="og:title" content="Nitesh Rawal — I build what happens behind the interface">
+  <meta property="og:description" content="Java backend engineering, microservices, Kafka, Kubernetes and cloud. 5.5+ years building software.">
+  <meta property="og:url" content="https://niteshrawal.is-a.dev/">
+  <meta property="og:image" content="https://niteshrawal.is-a.dev/identity/img/og-nitesh-rawal.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nitesh Rawal — Java backend engineering, faceted chrome sculpture on an obsidian background">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nitesh Rawal — Java Backend Engineer">
+  <meta name="twitter:description" content="I build what happens behind the interface. 5.5+ years building software.">
+  <meta name="twitter:image" content="https://niteshrawal.is-a.dev/identity/img/og-nitesh-rawal.png">
 
+  <link rel="icon" href="identity/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="identity/img/apple-touch-icon.png">
 
-    <!-- icon -->
-    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicon.ico" sizes="128x128">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="preload" href="identity/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="identity/identity.css">
 
-
-
-    <title>Nitesh Rawal | Software Engineer II</title>
-
-    <!-- GOOGLE FONT -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-
-
-    <!-- MATERIAL ICON FONT -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- ANIMATION -->
-    <link href="stylesheets/animate.min.css" rel="stylesheet">
-
-
-    <!-- MATERIALIZE -->
-    <link href="stylesheets/materialize.css" rel="stylesheet">
-    <!-- BOOTSTRAP -->
-    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- CUSTOM STYLE -->
-    <link href="stylesheets/style_dark_dark.css" id="switch_style" rel="stylesheet">
-
-    <!-- ENHANCEMENTS: animation & responsive polish -->
-    <link href="stylesheets/enhance.css" rel="stylesheet">
-    <link href="stylesheets/cursor_glow.css" rel="stylesheet">
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170990423-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-170990423-1');
-    </script>
-
-    <!-- ================== ENHANCED INTERACTION & ANIMATION ================== -->
-    <style>
-        :root {
-            --accent: #4ee08a;
-            --accent-soft: rgba(78,224,138,.16);
-            --blue-soft: rgba(47,111,184,.18);
-        }
-
-        html { scroll-behavior: smooth; }
-        body { overflow-x: hidden; }
-
-        /* Premium animated background */
-        #ambient-bg {
-            position: fixed; inset: 0; z-index: -2; pointer-events: none; overflow: hidden;
-            background:
-                radial-gradient(circle at var(--bg-mx,50%) var(--bg-my,45%), rgba(78,224,138,.10), transparent 24%),
-                radial-gradient(circle at 12% 18%, rgba(47,111,184,.20), transparent 30%),
-                radial-gradient(circle at 88% 78%, rgba(123,97,255,.13), transparent 32%),
-                linear-gradient(135deg,#040812 0%,#071321 48%,#03070f 100%);
-            transition: background-position .2s ease;
-        }
-        #ambient-bg::before {
-            content:""; position:absolute; inset:-20%; opacity:.18;
-            background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
-            background-size:70px 70px; transform:perspective(600px) rotateX(62deg) translateY(12%); transform-origin:center bottom;
-            animation:gridDrift 22s linear infinite;
-        }
-        #ambient-bg::after {
-            content:""; position:absolute; inset:0; opacity:.20; mix-blend-mode:screen;
-            background:radial-gradient(ellipse at 50% 115%, rgba(78,224,138,.18), transparent 48%);
-        }
-        #particle-canvas { position:absolute; inset:0; width:100%; height:100%; opacity:.9; }
-        /* ambient shapes: softened, non-circular blobs (user requested no perfect circles) */
-        .ambient-orb { position:absolute; border-radius:22% 30% 25% 28%; filter:blur(70px); opacity:.20; will-change:transform; mix-blend-mode:screen; transform:rotate(12deg); }
-        .orb-one { width:340px; height:340px; background:#2f6fb8; left:-110px; top:8%; animation:orbFloatOne 14s ease-in-out infinite alternate; }
-        .orb-two { width:300px; height:300px; background:#4ee08a; right:-90px; top:42%; animation:orbFloatTwo 17s ease-in-out infinite alternate; }
-        .orb-three { width:240px; height:240px; background:#7b61ff; left:38%; bottom:-110px; animation:orbFloatThree 19s ease-in-out infinite alternate; }
-        .orb-four { width:190px; height:190px; background:#18b7d8; left:65%; top:5%; animation:orbFloatFour 15s ease-in-out infinite alternate; }
-        @keyframes orbFloatOne { to { transform:translate(150px,100px) scale(1.2) rotate(-8deg); } }
-        @keyframes orbFloatTwo { to { transform:translate(-130px,-110px) scale(1.22) rotate(6deg); } }
-        @keyframes orbFloatThree { to { transform:translate(100px,-130px) scale(1.25) rotate(-4deg); } }
-        @keyframes orbFloatFour { to { transform:translate(-90px,120px) scale(1.18) rotate(10deg); } }
-        @keyframes gridDrift { from { transform:perspective(600px) rotateX(62deg) translateY(12%); } to { transform:perspective(600px) rotateX(62deg) translateY(18%); } }
-        .shooting-star { position:absolute; width:130px; height:1px; opacity:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent); transform:rotate(-25deg); animation:shoot 7s linear infinite; }
-        .star-one { left:12%; top:18%; animation-delay:1s; } .star-two { left:70%; top:26%; animation-delay:4s; } .star-three { left:48%; top:8%; animation-delay:6s; }
-        @keyframes shoot { 0%,70% { opacity:0; transform:translate(0,0) rotate(-25deg); } 73% { opacity:.9; } 82% { opacity:0; transform:translate(360px,170px) rotate(-25deg); } 100% { opacity:0; } }
-        #scroll-progress { position:fixed; top:0; left:0; width:100%; height:3px; z-index:99999; background:rgba(255,255,255,.05); }
-        #scroll-progress span { display:block; width:0; height:100%; background:linear-gradient(90deg,#2f6fb8,#4ee08a); box-shadow:0 0 14px rgba(78,224,138,.65); }
-        /* Mouse dot & ring cursor */
-        #mouse-dot, #mouse-ring {
-            position: fixed;
-            left: 0; top: 0;
-            pointer-events: none;
-            z-index: 99999;
-            transform: translate3d(-50%,-50%,0);
-            transition: transform .12s linear, opacity .18s linear, width .12s ease, height .12s ease, background-color .12s ease, border-color .12s ease;
-            opacity: 0;
-        }
-        #mouse-dot {
-            width: 10px; height: 10px; border-radius:50%;
-            background: var(--accent); box-shadow:0 6px 18px rgba(78,224,138,.18);
-        }
-        #mouse-ring {
-            width: 36px; height:36px; border-radius:50%;
-            border:2px solid rgba(255,255,255,.12); background:transparent;
-        }
-        /* keep existing hover styles safe if other scripts add cursor classes */
-        body.cursor-hover #mouse-ring { width:52px; height:52px; border-color:rgba(78,224,138,.9); background:rgba(78,224,138,.05); }
-
-        /* Safe reveal: content stays visible if JS fails */
-        .reveal { opacity:1; transform:translateY(0); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.8,.2,1); }
-        .js-reveal .reveal { opacity:1; transform:translateY(0); }
-        .js-reveal .reveal.active { opacity:1; transform:translateY(0); }
-        .reveal:nth-child(2) { transition-delay:.05s; }
-        .reveal:nth-child(3) { transition-delay:.1s; }
-        .reveal:nth-child(4) { transition-delay:.15s; }
-
-        /* Interactive cards */
-        .card, .timeline-content, .blog, #skills-card, #interest-card, #contact-card {
-            transform-style:preserve-3d;
-            will-change:transform;
-        }
-        .interactive-lift { transition:transform .25s ease, box-shadow .3s ease; }
-        .interactive-lift:hover { box-shadow:0 20px 45px rgba(0,0,0,.32); }
-
-        /* AI Assisted Development */
-        #ai-dev-card {
-            position:relative;
-            overflow:hidden;
-            background:linear-gradient(145deg,rgba(12,22,38,.94),rgba(8,14,25,.9)) !important;
-            border:1px solid rgba(78,224,138,.16);
-            box-shadow:0 18px 55px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.05);
-        }
-        #ai-dev-card::after {
-            content:""; position:absolute; width:280px; height:280px; border-radius:50%;
-            background:radial-gradient(circle,rgba(78,224,138,.13),transparent 68%);
-            left:var(--ai-x,70%); top:var(--ai-y,20%); transform:translate(-50%,-50%);
-            transition:left .15s ease,top .15s ease; pointer-events:none;
-        }
-        .ai-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px; position:relative; z-index:1; }
-        .ai-pill { padding:18px 16px; border-radius:12px; background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.07); transition:transform .25s ease, background .25s ease, border-color .25s ease; }
-        .ai-pill:hover { transform:translateY(-7px) scale(1.015); background:rgba(78,224,138,.07); border-color:rgba(78,224,138,.28); }
-        .ai-pill i { font-size:22px; color:#4ee08a; margin-bottom:10px; display:block; }
-        .ai-pill strong { display:block; color:#fff; margin-bottom:5px; }
-        .ai-pill span { opacity:.78; font-size:13px; line-height:1.6; }
-
-        /* Hobbies */
-        #interest-card { position:relative; overflow:hidden; background:rgba(8,14,25,.86)!important; border:1px solid rgba(255,255,255,.07); }
-        #interest-card::before { content:""; position:absolute; width:340px; height:340px; border-radius:50%; pointer-events:none; left:var(--hobby-x,50%); top:var(--hobby-y,50%); transform:translate(-50%,-50%); background:radial-gradient(circle,rgba(78,224,138,.15),transparent 70%); transition:left .08s linear,top .08s linear; }
-        .hobby-quote { text-align:center; opacity:.82; font-style:italic; }
-        .hobby-grid { position:relative; z-index:1; display:grid; grid-template-columns:repeat(6,1fr); gap:14px; padding:8px 18px 22px; }
-        .hobby-item { perspective:900px; }
-        .hobby-tile { min-height:150px; padding:18px 10px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; border-radius:15px; background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.07); transform-style:preserve-3d; transition:transform .18s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease; }
-        .hobby-tile i { font-size:31px; margin-bottom:12px; color:#4ee08a; transform:translateZ(24px); transition:transform .25s ease,text-shadow .25s ease; }
-        .hobby-tile strong { color:#fff; font-size:15px; transform:translateZ(18px); }
-        .hobby-tile span { margin-top:5px; font-size:11px; opacity:.58; transform:translateZ(12px); }
-        .hobby-item.featured .hobby-tile { border-color:rgba(78,224,138,.28); box-shadow:inset 0 0 35px rgba(78,224,138,.035); }
-        .hobby-tile:hover { border-color:rgba(78,224,138,.42); background:rgba(78,224,138,.065); box-shadow:0 18px 40px rgba(0,0,0,.32); }
-        .hobby-tile:hover i { transform:translateZ(34px) scale(1.18) rotate(-5deg); text-shadow:0 0 18px rgba(78,224,138,.65); }
-        @media(max-width:991px){ .hobby-grid{grid-template-columns:repeat(3,1fr);} }
-        @media(max-width:600px){ .hobby-grid{grid-template-columns:repeat(2,1fr);gap:9px;padding:8px 10px 16px;} .hobby-tile{min-height:125px;} }
-
-        /* Contact */
-        #contact-card .card { background:rgba(8,14,25,.9) !important; }
-        .contact-side { height:100%; min-height:100%; padding:30px; border-radius:4px; background:linear-gradient(145deg,rgba(12,24,40,.94),rgba(7,13,23,.92)); border:1px solid rgba(255,255,255,.07); }
-        .contact-side h5 { color:#fff; margin-top:0; }
-        .contact-side p { opacity:.78; line-height:1.7; }
-        .contact-method { display:flex; align-items:center; gap:14px; padding:13px 0; border-bottom:1px solid rgba(255,255,255,.06); }
-        .contact-method:last-child { border-bottom:0; }
-        .contact-method i { width:38px; height:38px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:rgba(78,224,138,.08); color:#4ee08a; }
-        .contact-method a { color:#fff; word-break:break-word; }
-        .contact-method a:hover { color:#4ee08a; }
-        .contact-status { display:none; padding:12px 14px; margin-top:15px; border-radius:8px; background:rgba(78,224,138,.08); color:#bff8d3; border:1px solid rgba(78,224,138,.2); }
-        .contact-status.error { background:rgba(255,80,80,.08); color:#ffb4b4; border-color:rgba(255,80,80,.2); }
-
-        /* Button polish */
-        .btn, .social { transition:transform .2s ease, box-shadow .25s ease, filter .25s ease; }
-        .btn:hover, .social:hover { transform:translateY(-3px) scale(1.03); box-shadow:0 10px 24px rgba(0,0,0,.3); filter:brightness(1.08); }
-
-        /* Nav highlight */
-        .section.nav-highlight, #about.nav-highlight { animation:nav-flash 1s ease-out; }
-        @keyframes nav-flash { 0% { box-shadow:inset 0 0 0 9999px rgba(255,255,255,.08); } 100% { box-shadow:inset 0 0 0 9999px rgba(255,255,255,0); } }
-
-        @media (max-width: 767px) {
-            #mouse-dot, #mouse-ring { display:none; }
-            .ai-grid { grid-template-columns:1fr; }
-            .hobby-tile { min-height:110px; }
-            .ambient-orb { opacity:.12; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior:auto; }
-            *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
-            .js-reveal .reveal { opacity:1; transform:none; }
-            #particle-canvas, #mouse-dot, #mouse-ring { display:none; }
-        }
-
-        /* FIX: profile v-card was being clipped by a fixed height from the
-           base theme, which hid the last bio item and the social icons.
-           Let it size to its actual content instead. */
-        #v-card { height:auto !important; min-height:0 !important; overflow:visible !important; }
-        #v-card .card-content { height:auto !important; min-height:0 !important; overflow:visible !important; padding-bottom:24px; }
-        #v-card .infos { height:auto !important; max-height:none !important; overflow:visible !important; }
-        #v-card .profile-list { height:auto !important; max-height:none !important; overflow:visible !important; }
-        #v-card .links { position:relative; z-index:2; overflow:visible !important; padding:14px 0 4px; display:flex; flex-wrap:wrap; gap:8px; }
-        #v-card .links .social { position:relative; }
-
-        /* FIX: scrollreveal/custom.js was toggling the social icons back to
-           hidden (opacity/visibility) after the initial flash on load,
-           since it never detected them as "in view". Force them to stay
-           visible and clickable regardless of what that script sets. */
-        #v-card .links,
-        #v-card .links .social {
-            opacity:1 !important;
-            visibility:visible !important;
-            transform:none !important;
-            pointer-events:auto !important;
-        }
-
-        /* FIX: #v-card #profile (the 400px photo) is an absolutely
-           positioned SIBLING of .card-content, not a child of it - so the
-           z-index:2 on .links above only ever competed against other
-           children of .card-content, and never actually got compared to
-           #profile's z-index:1. On viewport widths where the bio text is
-           short enough that the social icon row falls within the photo's
-           vertical span, the (invisible) rest of the photo's box was
-           sitting on top and silently swallowing clicks meant for the
-           icons - which is why it looked fine on some screens/devices and
-           silently failed to navigate on others. Giving .card-content its
-           own positioned stacking context with a higher z-index than
-           #profile guarantees the whole content column - links included -
-           always renders (and receives clicks) above the photo. */
-        #v-card .card-content { position:relative; z-index:3; }
-        #v-card #profile { pointer-events:none; }
-        #v-card #profile .add-btn { pointer-events:auto; }
-    
-/* ===== ENHANCED SKILLS SECTION ===== */
-#skills { position:relative; overflow:hidden; }
-#skills::before,#skills::after{
- content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(55px);
- opacity:.35;animation:skillOrb 9s ease-in-out infinite alternate;
-}
-#skills::before{width:280px;height:280px;left:-90px;top:8%;background:radial-gradient(circle,rgba(64,120,255,.42),transparent 70%);}
-#skills::after{width:330px;height:330px;right:-120px;bottom:3%;background:radial-gradient(circle,rgba(78,224,138,.28),transparent 70%);animation-delay:-4s;}
-@keyframes skillOrb{to{transform:translate(35px,-25px) scale(1.12);}}
-
-#skills-card.skills-transparent{
- position:relative;overflow:hidden;border-radius:18px;
- background:
- radial-gradient(circle at 10% 10%,rgba(64,120,255,.16),transparent 28%),
- radial-gradient(circle at 90% 90%,rgba(78,224,138,.11),transparent 30%),
- linear-gradient(135deg,rgba(7,14,28,.96),rgba(15,25,43,.92)) !important;
- border:1px solid rgba(120,180,255,.18);
- backdrop-filter:blur(12px);
- box-shadow:0 25px 70px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.06);
- transition:transform .18s ease-out,box-shadow .35s ease,border-color .35s ease;
-}
-#skills-card.skills-transparent::before{
- content:"";position:absolute;inset:0;pointer-events:none;
- background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.06) 45%,transparent 55%);
- transform:translateX(-120%);animation:skillSheen 7s ease-in-out infinite;
-}
-@keyframes skillSheen{0%,55%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
-#skills-card.skills-transparent::after{
- content:"";position:absolute;width:280px;height:280px;border-radius:50%;pointer-events:none;
- left:var(--skill-mouse-x,50%);top:var(--skill-mouse-y,50%);transform:translate(-50%,-50%);
- background:radial-gradient(circle,rgba(78,224,138,.12),transparent 68%);
- transition:left .1s linear,top .1s linear;
- z-index:1;
-}
-#skills-card.skills-transparent .card-content{position:relative;z-index:2;background:transparent!important;}
-
-#skills-card .skills-title h6{
- display:inline-block;padding:8px 15px;margin:4px 0 15px;border-radius:999px;
- color:#f7fbff;font-weight:800;letter-spacing:1px;text-transform:uppercase;
- background:linear-gradient(90deg,rgba(64,120,255,.16),rgba(78,224,138,.10));
- border:1px solid rgba(120,180,255,.14);
- box-shadow:0 8px 24px rgba(0,0,0,.2);
-}
-
-#skills-card .skillbar{
- position:relative;overflow:hidden;padding:11px 12px 13px;margin-bottom:14px;border-radius:11px;
- background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.018));
- border:1px solid rgba(255,255,255,.075);
- box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 8px 20px rgba(0,0,0,.2);
- transition:transform .28s cubic-bezier(.2,.8,.2,1),border-color .28s,box-shadow .28s,background .28s;
-}
-#skills-card .skillbar:hover{
- transform:translateY(-5px) scale(1.015);
- border-color:rgba(78,224,138,.3);
- background:linear-gradient(135deg,rgba(64,120,255,.10),rgba(78,224,138,.06));
- box-shadow:0 15px 30px rgba(0,0,0,.3),0 0 25px rgba(78,224,138,.08);
-}
-#skills-card .skillbar::after{
- content:"";position:absolute;top:0;bottom:0;left:-45%;width:35%;
- background:linear-gradient(90deg,transparent,rgba(255,255,255,.11),transparent);
- transform:skewX(-18deg);transition:left .5s;
-}
-#skills-card .skillbar:hover::after{left:125%;}
-#skills-card .skillbar-title span{color:#f2f6fb;font-weight:700;letter-spacing:.25px;text-shadow:0 2px 6px rgba(0,0,0,.75);}
-#skills-card .skill-bar-percent{color:#63e89a;font-weight:800;text-shadow:0 0 10px rgba(78,224,138,.25);}
-#skills-card .skillbar-bar{
- position:relative;height:8px;margin-top:7px;overflow:hidden;border-radius:999px;
- background:rgba(255,255,255,.075)!important;box-shadow:inset 0 2px 5px rgba(0,0,0,.55);
-}
-#skills-card .skillbar-bar::before{
- content:"";position:absolute;inset:0;width:0;border-radius:inherit;
- background:linear-gradient(90deg,#4a78ff,#4fb8ff 48%,#4ee08a);
- box-shadow:0 0 10px rgba(78,224,138,.25),inset 0 1px 0 rgba(255,255,255,.35);
- animation:skillFill 1.4s cubic-bezier(.2,.75,.2,1) forwards;
-}
-#skills-card .skillbar[data-percent="90%"] .skillbar-bar::before{width:90%}
-#skills-card .skillbar[data-percent="85%"] .skillbar-bar::before{width:85%}
-#skills-card .skillbar[data-percent="80%"] .skillbar-bar::before{width:80%}
-#skills-card .skillbar[data-percent="75%"] .skillbar-bar::before{width:75%}
-#skills-card .skillbar[data-percent="70%"] .skillbar-bar::before{width:70%}
-#skills-card .skillbar[data-percent="65%"] .skillbar-bar::before{width:65%}
-#skills-card .skillbar[data-percent="60%"] .skillbar-bar::before{width:60%}
-#skills-card .skillbar[data-percent="50%"] .skillbar-bar::before{width:50%}
-#skills-card .skillbar[data-percent="40%"] .skillbar-bar::before{width:40%}
-#skills-card .skillbar[data-percent="30%"] .skillbar-bar::before{width:30%}
-@keyframes skillFill{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1);transform-origin:left}}
-#skills-card .skillbar-bar::after{
- content:"";position:absolute;top:0;bottom:0;width:70px;left:-80px;
- background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
- transform:skewX(-20deg);animation:skillShine 3.2s ease-in-out infinite;
-}
-@keyframes skillShine{0%,35%{left:-80px}70%,100%{left:110%}}
-@media(max-width:767px){
- #skills-card.skills-transparent{border-radius:12px}
- #skills-card .skillbar:hover{transform:translateY(-3px) scale(1.01)}
- #skills::before,#skills::after{opacity:.18}
-}
-@media(prefers-reduced-motion:reduce){
- #skills::before,#skills::after,#skills-card.skills-transparent::before,#skills-card .skillbar-bar::before,#skills-card .skillbar-bar::after{animation:none!important}
-}
-
-
-/* FINAL STABLE SKILLS + HOBBIES DESIGN */
-.skills-subtitle{text-align:center;opacity:.62;max-width:720px;margin:-8px auto 28px;font-size:13px}
-.skills-dashboard{position:relative;overflow:hidden;padding:28px;border-radius:22px;background:linear-gradient(135deg,rgba(10,18,34,.97),rgba(9,25,37,.94));border:1px solid rgba(93,174,255,.18);box-shadow:0 28px 80px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06);}
-.skills-dashboard:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--skill-x,70%) var(--skill-y,20%),rgba(78,224,138,.13),transparent 25%),radial-gradient(circle at 10% 90%,rgba(63,120,255,.12),transparent 30%);pointer-events:none}
-.skills-dashboard-glow{position:absolute;width:240px;height:240px;border-radius:50%;right:-100px;top:-100px;background:rgba(78,224,138,.12);filter:blur(35px);animation:skillFloat 8s ease-in-out infinite alternate}
-@keyframes skillFloat{to{transform:translate(-90px,100px) scale(1.35)}}
-.skills-dashboard-head{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:25px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.07)}
-.skills-kicker{display:inline-block;font-size:10px;letter-spacing:1.6px;color:#5fe99b;font-weight:800;margin-bottom:7px}.skills-dashboard-head h5{margin:0;color:#fff;font-size:21px}.skills-status{font-size:11px;color:#a8b6c8;padding:8px 12px;border:1px solid rgba(78,224,138,.18);border-radius:999px;background:rgba(78,224,138,.05);white-space:nowrap}.skills-status span{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ee08a;box-shadow:0 0 10px #4ee08a;margin-right:7px;animation:pulseSkill 1.7s infinite}@keyframes pulseSkill{50%{opacity:.35;transform:scale(.7)}}
-.skills-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.skill-group{padding:17px;border-radius:15px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);transition:transform .28s ease,border-color .28s ease,background .28s ease;box-shadow:inset 0 1px 0 rgba(255,255,255,.035)}.skill-group:hover{transform:translateY(-5px);border-color:rgba(78,224,138,.24);background:rgba(78,224,138,.035)}
-.skill-group-head{display:flex;align-items:center;gap:9px;color:#fff;font-weight:800;font-size:12px;letter-spacing:.5px;margin-bottom:14px}.skill-group-head i{color:#4ee08a;font-size:16px;width:20px;text-align:center}
-.skill-chip{position:relative;margin:9px 0;padding:9px 10px 11px;border-radius:9px;background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.045);transition:transform .2s ease,border-color .2s ease}.skill-chip:hover{transform:translateX(4px);border-color:rgba(78,224,138,.22)}.skill-chip b{font-size:11px;color:#eaf1f8}.skill-chip b i{color:#4ee08a;margin-right:4px}.skill-chip em{float:right;font-style:normal;font-size:10px;color:#63e89a;font-weight:800}.skill-track{display:block;height:4px;border-radius:99px;background:rgba(255,255,255,.08);margin-top:8px;overflow:hidden}.skill-track i{display:block;height:100%;width:calc(var(--level)*1%);border-radius:99px;background:linear-gradient(90deg,#477cff,#4fbaff,#4ee08a);box-shadow:0 0 10px rgba(78,224,138,.3);transform-origin:left;animation:skillBar 1.1s ease-out both}@keyframes skillBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.skills-footer{position:relative;z-index:2;display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);color:#9aabbc;font-size:11px}.skills-footer i{color:#4ee08a;margin-right:5px}
-.hobbies-dashboard{position:relative;overflow:hidden;padding:0 0 22px;border-radius:22px;background:linear-gradient(145deg,rgba(11,20,34,.97),rgba(8,16,27,.94));border:1px solid rgba(255,255,255,.08);box-shadow:0 25px 70px rgba(0,0,0,.4)}.hobbies-dashboard:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--hobby-x,50%) var(--hobby-y,30%),rgba(78,224,138,.12),transparent 27%);pointer-events:none}.hobby-spotlight{position:absolute;width:300px;height:300px;border-radius:50%;right:-120px;bottom:-140px;background:rgba(64,120,255,.12);filter:blur(50px);animation:hobbyFloat 10s ease-in-out infinite alternate}@keyframes hobbyFloat{to{transform:translate(-100px,-80px) scale(1.3)}}
-.hobbies-intro{position:relative;z-index:2;padding:25px 20px 8px}.hobby-quote{text-align:center;color:#dfe9f4;font-size:15px;font-style:italic;opacity:.82}.hobby-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;padding:12px 18px 0}.hobby-item{perspective:900px}.hobby-tile{position:relative;min-height:165px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.075);transform-style:preserve-3d;transition:transform .16s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease}.hobby-item.featured .hobby-tile{background:linear-gradient(145deg,rgba(78,224,138,.10),rgba(255,255,255,.035));border-color:rgba(78,224,138,.30);box-shadow:inset 0 0 30px rgba(78,224,138,.035)}.hobby-tile:hover{border-color:rgba(78,224,138,.45);background:rgba(78,224,138,.07);box-shadow:0 20px 40px rgba(0,0,0,.3)}.hobby-icon{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(78,224,138,.08);border:1px solid rgba(78,224,138,.12);margin-bottom:12px;transform:translateZ(28px);transition:transform .25s ease,box-shadow .25s ease}.hobby-icon i{font-size:25px;color:#4ee08a}.hobby-tile:hover .hobby-icon{transform:translateZ(38px) scale(1.12);box-shadow:0 0 25px rgba(78,224,138,.18)}.hobby-tile strong{color:#fff;font-size:15px;transform:translateZ(20px)}.hobby-tile span{margin-top:5px;font-size:10px;line-height:1.45;color:#9baaba;transform:translateZ(14px)}.hobby-tile b{display:none;margin-top:9px;font-size:8px;letter-spacing:1px;color:#4ee08a}.featured .hobby-tile b{display:block}
-@media(max-width:1100px){.skills-grid{grid-template-columns:repeat(2,1fr)}.hobby-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.skills-dashboard{padding:18px}.skills-dashboard-head{align-items:flex-start;flex-direction:column}.skills-grid{grid-template-columns:1fr}.hobby-grid{grid-template-columns:repeat(2,1fr);gap:9px;padding:10px}.hobby-tile{min-height:140px}.skills-footer{gap:12px}}
-
-</style>
-
-
-    <style>
-        .click-ripple { position:absolute; width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.35); transform:translate(-50%,-50%) scale(1); animation:clickRipple .6s ease-out forwards; pointer-events:none; }
-        @keyframes clickRipple { to { transform:translate(-50%,-50%) scale(18); opacity:0; } }
-
-        /* Typewriter cursor styling */
-        .typewriter-cursor { display:inline-block; margin-left:8px; opacity:1; color: var(--accent, #4ee08a); font-weight:700; animation:tw-blink 1s steps(2,end) infinite; }
-        @keyframes tw-blink { 50% { opacity:0; } }
-        @media (prefers-reduced-motion: reduce) { .typewriter-cursor { animation: none; } }
-    </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Nitesh Rawal","jobTitle":"Software Engineer II","url":"https://niteshrawal.is-a.dev/","knowsAbout":["Java","Spring Boot","Microservices","REST APIs","Apache Kafka","Docker","Kubernetes","AWS"],"sameAs":["https://github.com/nitesh401","https://www.linkedin.com/in/nitesh-rawal-50923b199/"]}
+  </script>
 </head>
-
 <body>
+  <a class="skip" href="#stack">Skip to technology map</a>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="cursor" aria-hidden="true"></div>
 
-    <!-- Interactive ambient background -->
-    <div id="ambient-bg" aria-hidden="true">
-        <canvas id="particle-canvas"></canvas>
-        <div class="ambient-orb orb-one"></div>
-        <div class="ambient-orb orb-two"></div>
-        <div class="ambient-orb orb-three"></div>
-        <div class="ambient-orb orb-four"></div>
-        <span class="shooting-star star-one"></span><span class="shooting-star star-two"></span><span class="shooting-star star-three"></span>
-        <div class="cursor-glow"></div>
-    </div>
+  <main>
+    <!-- ============ 01 · HERO ============ -->
+    <header class="hero" id="top">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <svg class="hero__fallback" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <polygon points="200,40 340,120 340,280 200,360 60,280 60,120"/>
+          <polygon points="200,90 296,145 296,255 200,310 104,255 104,145" opacity=".7"/>
+          <path d="M200 40V90M340 120L296 145M340 280L296 255M200 360V310M60 280L104 255M60 120L104 145M200 90L296 255M200 90L104 255M296 145L104 145M296 145L200 310M104 145L200 310" opacity=".5"/>
+        </g>
+      </svg>
 
-    <div id="scroll-progress" aria-hidden="true"><span></span></div>
-    <div id="mouse-dot" aria-hidden="true"></div>
-    <div id="mouse-ring" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="eyebrow"><span class="dot"></span>Software Engineer II</p>
 
-    <!--==========================================
-                  PRE-LOADER
-===========================================-->
-    <div id="loading">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <div class="box-holder animated bounceInDown">
-                    <span class="load-box"><span class="box-inner"></span></span>
-                </div>
-                <!-- NAME & STATUS -->
-                <div class="text-holder text-center">
-                    <h2>Nitesh Rawal</h2>
-                    <h6>Java Backend Developer</h6>
-                </div>
-            </div>
+        <h1 class="name" aria-label="Nitesh Rawal">
+          <span class="name__row" aria-hidden="true"><span style="--i:0">N</span><span style="--i:1">I</span><span style="--i:2">T</span><span style="--i:3">E</span><span style="--i:4">S</span><span style="--i:5">H</span></span>
+          <span class="name__row name__row--outline" aria-hidden="true"><span style="--i:6">R</span><span style="--i:7">A</span><span style="--i:8">W</span><span style="--i:9">A</span><span style="--i:10">L</span></span>
+        </h1>
+
+        <p class="spec">Java backend engineering <i>·</i> Cloud <i>·</i> End-to-end development</p>
+        <p class="statement">I build what happens <em>behind the interface.</em></p>
+
+        <div class="hero__meta">
+          <figure class="plate">
+            <picture>
+              <source srcset="identity/img/portrait-360.webp 360w, identity/img/portrait-620.webp 620w" sizes="96px" type="image/webp">
+              <img src="assets/photo_crop.jpeg" width="620" height="620" alt="Portrait of Nitesh Rawal" decoding="async">
+            </picture>
+            <i class="plate__r"></i><i class="plate__b"></i>
+          </figure>
+          <p class="years"><b>5.5+</b><span>years building<br>software</span></p>
         </div>
-    </div>
 
-    <!--==========================================
-                    HEADER
-===========================================-->
-    <header id="home">
-        <nav id="theMenu" class="menu">
-
-            <!--MENU-->
-            <div id="menu-options" class="menu-wrap">
-
-                <button id="portfolio-theme-toggle" class="portfolio-theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle light and dark theme"><i class="fa fa-sun-o"></i></button>
-
-                <!--PERSONAL LOGO (use profile image) -->
-                <div class="logo-flat">
-                    <img alt="personal-logo" class="img-responsive sidebar-avatar" src="images/me.jpeg">
-                </div>
-                <br>
-
-                <!--OPTIONS-->
-                <a href="#home"><i class="title-icon fa fa-user"></i>Main</a>
-                <a href="#about"><i class="title-icon fa fa-dashboard"></i>Personal Review</a>
-                <a href="#experience"><i class="title-icon fa fa-briefcase"></i>Experience</a>
-                <a href="#education"><i class="title-icon fa fa-graduation-cap"></i>Education</a>
-                <a href="#skills"><i class="title-icon fa fa-sliders"></i>Skills</a>
-
-                <a href="#interest"><i class="title-icon fa fa-heart"></i>Hobbies</a>
-                <a href="#blog"><i class="title-icon fa fa-pencil-square"></i>Projects</a>
-                <a href="#contact"><i class="title-icon fa fa-envelope"></i>Contact Me</a>
-            </div>
-
-            <!-- MENU BUTTON -->
-            <div id="menuToggle">
-                <div class="toggle-normal">
-                    <i class="material-icons top-bar">remove</i>
-                    <i class="material-icons middle-bar">remove</i>
-                    <i class="material-icons bottom-bar">remove</i>
-                </div>
-            </div>
-        </nav>
-
-        <div class="header-background section">
-            <video id="portfolio-background-video" class="portfolio-background-video" autoplay muted loop playsinline poster="images/me.jpeg" aria-hidden="true">
-                <source src="https://videos.pexels.com/video-files/3129595/3129595-hd_1920_1080_25fps.mp4" type="video/mp4">
-            </video>
-            <canvas id="motion-canvas" class="portfolio-stage" aria-label="Interactive 3D portfolio background"></canvas>
-            <div id="v-card-holder">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-
-                            <!-- V-CARD -->
-                            <div id="v-card" class="card">
-
-                                <!-- PROFILE PICTURE (restored) -->
-                                <div id="profile" class="right" aria-hidden="false">
-                                    <img alt="profile-image" class="img-responsive main-avatar" src="images/me.jpeg">
-                                    <div class="slant"></div>
-                                    <div class="btn-floating btn-large add-btn">
-                                        <a href="#contact">
-                                            <i class="material-icons">contact_mail</i></a>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-
-                                    <!-- NAME & STATUS -->
-                                    <div class="info-headings">
-                                        <h4 id="name-typewriter" class="text-uppercase left" data-text="Nitesh Rawal">Nitesh Rawal</h4>
-                                        <h6 class="text-capitalize left"><span id="status-typewriter"></span><span id="status-cursor" class="typewriter-cursor">|</span></h6>
-                                    </div>
-
-                                    <!-- CONTACT INFO -->
-                                    <div class="infos">
-                                        <ul class="profile-list">
-                                            <li class="clearfix">
-                                                <span class="title"><i class="material-icons">insert_emoticon</i></span>
-                                                <span class="content">
-                                                    Hello I'm Nitesh Rawal, I am currently working as a Java Backend Developer.
-                                                </span>
-                                            </li>
-                                            <li class="clearfix">
-                                                <span class="title"><i class="material-icons">school</i></span>
-                                                <span class="content">
-                                                   I completed a Master's in Master of Computer Applications from the University of Hyderabad in 2021. 
-                                                </span>
-                                            </li>
-                                            <li class="clearfix">
-                                                <span class="title"><i class="material-icons">work</i></span>
-                                                <span class="content">
-                                                   Software Engineer II at Deloitte USI, Hyderabad (04/2025 to present)
-                                                </span>
-                                            </li>
-                                            <li class="clearfix">
-                                                <span class="title"><i class="material-icons">developer_mode</i></span>
-                                                <span class="content">
-                                                    5 years of Experience in Java Backend Development</span>
-                                            </li>
-                                            <li class="clearfix">
-                                                <span class="title"><i class="material-icons">home_work</i></span>
-                                                <span class="content"> Hyderabad,
-                                                    Telangana, India - 500019</span>
-                                            </li>
-
-                                    <li class="clearfix">
-    <span class="title">
-        <i class="material-icons">code</i>
-    </span>
-    <span class="content">
-        <a href="https://nitesh401.github.io/TheBlueprintVoyager/" target="_blank">
-            The Blueprint Voyager — Java Backend, Spring Boot, Microservices, Kafka & System Design
-        </a>
-    </span>
-</li>
-
-                                        </ul>
-                                    </div>
-
-                                    <!-- LINKS -->
-                                    <div class="links">
-
-                                        <!-- FACEBOOK -->
-                                        <a href="https://www.facebook.com"
-                                           target="_blank"
-                                           rel="noopener noreferrer"
-                                           aria-label="Facebook"
-                                           id="first_one"
-                                           class="social btn-floating indigo">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-
-                                        <!-- INSTAGRAM -->
-                                        <a href="https://www.instagram.com"
-                                           target="_blank"
-                                           rel="noopener noreferrer"
-                                           aria-label="Instagram"
-                                           class="social btn-floating blue">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-
-                                        <!-- LINKEDIN -->
-                                        <a href="https://www.linkedin.com/in/nitesh-rawal-50923b199/"
-                                           target="_blank"
-                                           rel="noopener noreferrer"
-                                           aria-label="LinkedIn"
-                                           class="social btn-floating blue darken-3">
-                                            <i class="fa fa-linkedin"></i>
-                                        </a>
-
-                                        <!-- GITHUB -->
-                                        <a href="https://github.com/nitesh401"
-                                           target="_blank"
-                                           rel="noopener noreferrer"
-                                           aria-label="GitHub"
-                                           class="social btn-floating black darken-3">
-                                            <i class="fa fa-github"></i>
-                                        </a>
-
-                                        <!-- HACKERRANK -->
-                                        <a href="https://www.hackerrank.com/niteshrawal12"
-                                           target="_blank"
-                                           rel="noopener noreferrer"
-                                           aria-label="HackerRank"
-                                           class="social btn-floating black darken-3">
-                                            <i class="fa fa-code"></i>
-                                        </a>
-
-                                        <!-- BLUEPRINT VOYAGER -->
-                                        <a href="https://nitesh401.github.io/TheBlueprintVoyager/"
-                                           target="_blank"
-                                           rel="noopener noreferrer"
-                                           aria-label="The Blueprint Voyager"
-                                           class="social btn-floating black darken-3"
-                                           title="The Blueprint Voyager">
-                                            <i class="fa fa-book"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="cta">
+          <a class="btn btn--primary" href="#stack">Explore my stack <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--ghost" href="#find">Find me online</a>
         </div>
+      </div>
+
+      <a class="scroll-cue" href="#stack" aria-label="Scroll to the engineering universe"><span></span></a>
     </header>
 
-    <!--==========================================
-                   ABOUT
-===========================================-->
-    <div id="about" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- DETAILS -->
-                    <div id="about-card" class="card">
-                        <div class="card-content">
-                            <!-- ABOUT PARAGRAPH -->
+    <!-- ============ 02 · ENGINEERING UNIVERSE ============ -->
+    <section class="sec" id="stack" aria-labelledby="stack-h">
+      <p class="kicker">02 / Engineering universe</p>
+      <h2 id="stack-h" class="big">One core.<br><span class="lime">Five</span> layers around it.</h2>
+      <p class="lede">Java and Spring Boot sit at the centre. Everything else exists to design, ship and keep those services healthy. Tap a layer.</p>
 
-                            <h2 align="center"><span id="typewriter-heading" class="typewriter-text"></span><span class="typewriter-cursor">|</span></h2>
-                            <p class="reveal"><span>Hello I'm Nitesh Rawal</span> </p>
-                            <p class="reveal"><span>Java Backend Developer with 5 years of experience</span></p>
-                            <p class="reveal">Currently a Software Engineer II at Deloitte USI, specializing in Java, Spring Boot, Spring WebFlux, Spring AOP, Spring Security, Kafka, Keycloak (IAM), Microservices, REST, and GraphQL. Proficient in designing workflows using BPMN (Camunda) and database management (Oracle DB, PostgreSQL, MySQL, MongoDB), plus deployment practices using Jenkins CI/CD, Docker, Kubernetes (HELM), and Microsoft Azure. Skilled in building scalable, efficient solutions and optimizing performance. Committed to continuous learning and collaboration, with a passion for pushing the boundaries of technology.</p>
-                            <p class="reveal">Beyond coding, I thrive in collaborative environments, actively engaging in peer reviews, development, and rigorous testing processes. With a focus on product excellence, I'm currently immersed in the Entitlement & Licensing Management platform at Deloitte USI. Working closely with cross-functional teams across the globe, I diligently adhere to agile methodologies, navigating our sprints via scrum Jira boards. This involves comprehensive peer code reviews and IP reviews with architects to ensure alignment with our high standards.
-                            </p>
-                            <p class="reveal"> As a dedicated proponent of Test-Driven Development (TDD), I fortify the resilience and scalability of our solutions. Our commitment to quality is evident in our codebase, with unit tests meticulously crafted in JUnit and Mockito, achieving a code test coverage of up to 85% and maintaining a zero-sonar issue policy for delivery. By prioritizing these practices, I contribute to the seamless delivery of robust and innovative software solutions. </p>
-                        </div>
-                        <div class="section-title">
-                            <h2 class="text-uppercase text-center"><i class="title-icon fa fa-book"></i>Portfolio</h2>
-                        </div>
-                        <!-- BUTTONS -->
-                        <div id="about-btn" class="card-action">
-                            <div class="about-btn">
-
-                                <a href="#" target="_blank"
-                                    class="btn waves-effect">
-                                    Download Resume </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="uni">
+        <div class="uni__map" id="uni-map">
+          <svg class="uni__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <line x1="50" y1="50" x2="50" y2="12"/>
+            <line x1="50" y1="50" x2="86" y2="38"/>
+            <line x1="50" y1="50" x2="72" y2="81"/>
+            <line x1="50" y1="50" x2="28" y2="81"/>
+            <line x1="50" y1="50" x2="14" y2="38"/>
+            <circle cx="50" cy="50" r="38"/>
+          </svg>
+          <div class="uni__core">
+            <span class="uni__core-k">Core</span>
+            <strong>Java<br>Spring&nbsp;Boot</strong>
+            <span class="uni__core-s">Microservices · REST APIs</span>
+          </div>
+          <button class="node is-active" type="button" style="--x:50%;--y:12%" data-group="backend" aria-pressed="true" aria-controls="uni-panel"><b>A</b><span>Backend</span></button>
+          <button class="node" type="button" style="--x:86%;--y:38%" data-group="events" aria-pressed="false" aria-controls="uni-panel"><b>B</b><span>Events &amp; data</span></button>
+          <button class="node" type="button" style="--x:72%;--y:81%" data-group="cloud" aria-pressed="false" aria-controls="uni-panel"><b>C</b><span>Containers &amp; cloud</span></button>
+          <button class="node" type="button" style="--x:28%;--y:81%" data-group="delivery" aria-pressed="false" aria-controls="uni-panel"><b>D</b><span>Delivery</span></button>
+          <button class="node" type="button" style="--x:14%;--y:38%" data-group="observe" aria-pressed="false" aria-controls="uni-panel"><b>E</b><span>Observability</span></button>
         </div>
-    </div>
 
-    <!--==========================================
-                   Experience
-===========================================-->
-    <section id="experience" class="section">
-        <div class="container">
-            <!-- SECTION TITLE -->
-            <div class="section-title">
-                <h4 class="text-uppercase text-center"><i class="title-icon fa fa-briefcase"></i>Experience</h4>
-            </div>
-
-            <div id="timeline-experience">
-
-                <!-- FIRST TIMELINE -->
-                <div class="timeline-block reveal">
-                    <!-- DOT -->
-                      <div class="timeline-dot"><i class="fa fa-briefcase"></i></div>
-                    <!-- TIMELINE CONTENT -->
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <!-- TIMELINE TITLE -->
-                            <h6 class="timeline-title"> Deloitte USI</h6>
-                            <!-- TIMELINE TITLE INFO -->
-                            <div class="timeline-info">
-                                <h6>
-                                    <small>Software Engineer II</small>
-                                </h6>
-                                <h6>
-                                    <small>04/2025 - Present</small>
-                                </h6>
-                            </div>
-                            <!-- TIMELINE PARAGRAPH -->
-                            <p>
-                                Working as a <span>Java Backend Developer</span> on the Entitlement &amp; Licensing Management platform.
-                            </p>
-                              <p>
-                                Techstack : <span>Java 21, Spring Boot, Spring WebFlux, Microservices, Apache Kafka, PostgreSQL, Docker, Kubernetes</span>
-
-                            </p>
-                            <!-- BUTTON TRIGGER MODAL -->
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-10">
-                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-block reveal">
-                    <div class="timeline-dot"><i class="fa fa-briefcase"></i></div>
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <h6 class="timeline-title">CGI</h6>
-                            <div class="timeline-info">
-                                <h6><small>Software Engineer</small></h6>
-                                <h6><small>07/2023 - 03/2025</small></h6>
-                            </div>
-                            <p>Worked as a <span>Java Backend Developer</span>.</p>
-                            <p>Tech stack: <span>Java 17, Spring, Spring Boot, Microservices, Confluent Kafka, PostgreSQL, MongoDB, Camunda, BPMN, JavaScript, Docker, Kubernetes, Keycloak</span></p>
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-8" aria-label="View CGI role details"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-block reveal">
-                    <div class="timeline-dot"><i class="fa fa-briefcase"></i></div>
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <h6 class="timeline-title">Techsophy</h6>
-                            <div class="timeline-info">
-                                <h6><small>Associate Software Engineer</small></h6>
-                                <h6><small>09/2021 - 07/2023</small></h6>
-                            </div>
-                            <p>Worked as a <span>Java Backend Engineer</span>.</p>
-                            <p>Tech stack: <span>Java 13, Spring, Spring Boot, Microservices, Apache Kafka, MySQL, Jenkins (CI/CD)</span></p>
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-2" aria-label="View Techsophy role details"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-block reveal">
-                    <div class="timeline-dot"><i class="fa fa-briefcase"></i></div>
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <h6 class="timeline-title">Techsophy</h6>
-                            <div class="timeline-info">
-                                <h6><small>Java Full Stack Intern</small></h6>
-                                <h6><small>05/2021 - 08/2021</small></h6>
-                            </div>
-                            <p>Training in <span>Spring Boot and React.js</span>.</p>
-                            <p>Tech stack: <span>Java 8, Spring Boot, Spring Security, MySQL, JavaScript, React.js</span></p>
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-2" aria-label="View Techsophy internship details"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-block reveal">
-                    <div class="timeline-dot"><i class="fa fa-briefcase"></i></div>
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <h6 class="timeline-title">SSI Digital</h6>
-                            <div class="timeline-info">
-                                <h6><small>Java Trainee — Summer Internship</small></h6>
-                                <h6><small>07/2019 - 10/2019</small></h6>
-                            </div>
-                            <p>Hands-on training in <span>Java application development</span>.</p>
-                            <p>Tech stack: <span>Java 8, JDBC, JSP, Servlet, Multithreading, HTML, CSS</span></p>
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-3" aria-label="View SSI Digital internship details"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="uni__panel" id="uni-panel" aria-live="polite">
+          <!-- Group data lives here so the page stays complete without JavaScript. -->
+          <article class="group is-active" data-group="backend">
+            <h3><b>A</b> Backend engineering</h3>
+            <p>The services themselves: contracts, business logic and the security around them.</p>
+            <ul class="tags tags--core">
+              <li>Java</li><li>Spring Boot</li><li>REST APIs</li><li>Microservices</li>
+            </ul>
+            <ul class="tags">
+              <li>Spring WebFlux &amp; WebClient</li><li>Spring Security</li><li>OAuth 2.0 / OpenID Connect</li><li>Keycloak</li>
+            </ul>
+          </article>
+          <article class="group" data-group="events">
+            <h3><b>B</b> Event-driven architecture &amp; data</h3>
+            <p>How services talk asynchronously and how state is stored, queried and integrated.</p>
+            <ul class="tags tags--core">
+              <li>Apache Kafka</li><li>Event-driven systems</li>
+            </ul>
+            <ul class="tags">
+              <li>Oracle Database</li><li>SQL</li><li>Hibernate</li><li>JDBC</li><li>Persistence &amp; integration patterns</li>
+            </ul>
+          </article>
+          <article class="group" data-group="cloud">
+            <h3><b>C</b> Containers &amp; cloud infrastructure</h3>
+            <p>Packaging services and running them on managed compute and Kubernetes.</p>
+            <ul class="tags tags--core">
+              <li>Docker</li><li>Kubernetes</li>
+            </ul>
+            <ul class="tags">
+              <li>AWS</li><li>Amazon EC2</li><li>Amazon EKS</li><li>Amazon CloudWatch</li>
+            </ul>
+          </article>
+          <article class="group" data-group="delivery">
+            <h3><b>D</b> Delivery &amp; automation</h3>
+            <p>Getting a change from commit to running service repeatably and safely.</p>
+            <ul class="tags tags--core">
+              <li>CI/CD</li><li>Automated testing</li>
+            </ul>
+            <ul class="tags">
+              <li>Jenkins</li><li>Azure DevOps</li><li>API Management (APIM)</li><li>Build &amp; deployment workflows</li>
+            </ul>
+          </article>
+          <article class="group" data-group="observe">
+            <h3><b>E</b> Observability &amp; quality</h3>
+            <p>Knowing what a service is doing in production, and keeping the code honest.</p>
+            <ul class="tags tags--core">
+              <li>Monitoring &amp; alerting</li><li>Logging &amp; troubleshooting</li>
+            </ul>
+            <ul class="tags">
+              <li>Dynatrace</li><li>Production diagnostics</li><li>JUnit</li><li>Mockito</li><li>SonarQube</li>
+            </ul>
+          </article>
         </div>
+      </div>
     </section>
 
+    <!-- ============ 03 · CODE TO PRODUCTION ============ -->
+    <section class="sec sec--pipe" id="pipeline" aria-labelledby="pipe-h">
+      <p class="kicker">03 / Code to production</p>
+      <h2 id="pipe-h" class="big">Seven layers.<br><span class="violet">One trace.</span></h2>
+      <p class="lede">A request crosses every layer below. So does a bug. An illustrative map of the lifecycle I work across, not a diagram of any one system.</p>
 
+      <div class="pipe" id="pipe">
+        <ol class="pipe__list">
+          <li class="stage" style="--n:0"><span class="stage__no">01</span><h3>API design</h3><p>REST contracts, versioning and gateway-level management.</p><ul class="tags"><li>REST APIs</li><li>APIM</li></ul></li>
+          <li class="stage" style="--n:1"><span class="stage__no">02</span><h3>Application services</h3><p>Business logic, security and service-to-service calls.</p><ul class="tags"><li>Java</li><li>Spring Boot</li></ul></li>
+          <li class="stage" style="--n:2"><span class="stage__no">03</span><h3>Event streaming</h3><p>Decoupling producers and consumers with durable events.</p><ul class="tags"><li>Apache Kafka</li></ul></li>
+          <li class="stage" style="--n:3"><span class="stage__no">04</span><h3>Persistence</h3><p>Relational storage, mapping and transactions.</p><ul class="tags"><li>Oracle</li><li>Hibernate</li><li>JDBC</li></ul></li>
+          <li class="stage" style="--n:4"><span class="stage__no">05</span><h3>Containers</h3><p>Reproducible images, orchestrated and scaled.</p><ul class="tags"><li>Docker</li><li>Kubernetes</li></ul></li>
+          <li class="stage" style="--n:5"><span class="stage__no">06</span><h3>Cloud infrastructure</h3><p>Compute and managed Kubernetes to run it all.</p><ul class="tags"><li>AWS EC2</li><li>AWS EKS</li></ul></li>
+          <li class="stage" style="--n:6"><span class="stage__no">07</span><h3>Observability</h3><p>Metrics, traces and logs that show what really happened.</p><ul class="tags"><li>CloudWatch</li><li>Dynatrace</li><li>Logging</li></ul></li>
+        </ol>
+        <div class="pipe__rail" aria-hidden="true"><i class="pipe__fill"></i><i class="pipe__pulse"></i></div>
+      </div>
 
-    <!--==========================================
-                   EDUCATION
-===========================================-->
-    <section id="education" class="section">
-        <div class="container">
-            <!-- SECTION TITLE -->
-            <div class="section-title">
-                <h4 class="text-uppercase text-center"><i class="title-icon fa fa-graduation-cap"></i>Education</h4>
-            </div>
-
-            <div id="timeline-education">
-
-
-
-                <!-- SECOND TIMELINE -->
-                <div class="timeline-block reveal">
-                    <!-- DOT -->
-                    <div class="timeline-dot"><i class="fa fa-graduation-cap"></i></div>
-                    <!-- TIMELINE CONTENT -->
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <!-- TIMELINE TITLE -->
-                            <h6 class="timeline-title"> University of Hyderabad</h6>
-                            <!-- TIMELINE TITLE INFO -->
-                            <div class="timeline-info">
-                                <h6>
-                                    <small>Master of Computer Application</small>
-                                </h6>
-                                <h6>
-                                    <small>2018 - 2021</small>
-                                </h6>
-                            </div>
-                            <!-- BUTTON TRIGGER MODAL -->
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-9">
-                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- FOURTH TIMELINE -->
-                <div class="timeline-block reveal">
-                    <!-- DOT -->
-                    <div class="timeline-dot"><i class="fa fa-graduation-cap"></i></div>
-                    <!-- TIMELINE CONTENT -->
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <!-- TIMELINE TITLE -->
-                            <h6 class="timeline-title">Shri RGP Gujarati Professional Institute , Indore</h6>
-                            <!-- TIMELINE TITLE INFO -->
-                            <div class="timeline-info">
-                                <h6>
-                                    <small>Bachelor Of Computer Application</small>
-                                </h6>
-                                <h6>
-                                    <small>2014 - 2017</small>
-                                </h6>
-                            </div>
-                            <!-- BUTTON TRIGGER MODAL -->
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-2">
-                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- FIFTH TIMELINE -->
-                <div class="timeline-block reveal">
-                    <!-- DOT -->
-                    <div class="timeline-dot">
-                        <h6>12</h6>
-                    </div>
-                    <!-- TIMELINE CONTENT -->
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <!-- TIMELINE TITLE -->
-                            <h6 class="timeline-title">The New Green Field Public Academy, Indore</h6>
-                            <!-- TIMELINE TITLE INFO -->
-                            <div class="timeline-info">
-                                <h6>
-                                    <small>12th C.B.S.E. Board</small>
-                                </h6>
-                                <h6>
-                                    <small>2013 - 2014</small>
-                                </h6>
-                            </div>
-                            <!-- TIMELINE PARAGRAPH -->
-                            <p>
-                                Subject : <span>Physics, Chemistry, Maths</span>
-                            </p>
-                            <!-- BUTTON TRIGGER MODAL -->
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-2">
-                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- SIXTH TIMELINE -->
-                <div class="timeline-block reveal">
-                    <!-- DOT -->
-                    <div class="timeline-dot">
-                        <h6>10</h6>
-                    </div>
-                    <!-- TIMELINE CONTENT -->
-                    <div class="card timeline-content">
-                        <div class="card-content">
-                            <!-- TIMELINE TITLE -->
-                            <h6 class="timeline-title">The New Green Field Public Academy, Indore</h6>
-                            <!-- TIMELINE TITLE INFO -->
-                            <div class="timeline-info">
-                                <h6>
-                                    <small>10th C.B.S.E. Board </small>
-                                </h6>
-                                <h6>
-                                    <small>2011 - 2012</small>
-                                </h6>
-                            </div>
-                            <!-- BUTTON TRIGGER MODAL -->
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-3">
-                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+      <div class="trace">
+        <button class="btn btn--ghost" type="button" id="trace-btn" aria-describedby="trace-note">Trace a failure <span aria-hidden="true">↑</span></button>
+        <p id="trace-note" class="trace__note">Something is wrong in production. Start at the bottom, follow the signal upward: an alert, then logs and metrics, then the container, the event, the data, and finally the contract.</p>
+      </div>
     </section>
 
+    <!-- ============ 04 · CAPABILITIES ============ -->
+    <section class="sec" id="capabilities" aria-labelledby="cap-h">
+      <p class="kicker">04 / What I build</p>
+      <h2 id="cap-h" class="big">Ten things<br>I <span class="lime">do well.</span></h2>
 
-    <!--==========================================
-                   SKILLS
-===========================================-->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-uppercase text-center"><i class="title-icon fa fa-sliders"></i>Skills</h4>
-                <p class="skills-subtitle">Technologies and tools I use to design, build, test and deliver production-ready software.</p>
-            </div>
+      <ol class="caps">
+        <li><span>01</span>Design and develop Java backend services.</li>
+        <li><span>02</span>Build and integrate REST APIs.</li>
+        <li><span>03</span>Work with distributed, event-driven systems.</li>
+        <li><span>04</span>Implement authentication and authorization.</li>
+        <li><span>05</span>Integrate relational databases and persistence layers.</li>
+        <li><span>06</span>Containerize services and work with Kubernetes.</li>
+        <li><span>07</span>Use AWS compute, Kubernetes infrastructure and monitoring.</li>
+        <li><span>08</span>Support CI/CD and deployment workflows.</li>
+        <li><span>09</span>Investigate behaviour with logs and observability tools.</li>
+        <li><span>10</span>Write automated unit tests and improve code quality.</li>
+      </ol>
 
-            <div id="skills-card" class="skills-dashboard reveal">
-                <div class="skills-dashboard-glow"></div>
-                <div class="skills-dashboard-head">
-                    <div>
-                        <span class="skills-kicker"><i class="fa fa-terminal"></i> ENGINEERING TOOLKIT</span>
-                        <h5>Building reliable software across the stack</h5>
-                    </div>
-                    <div class="skills-status"><span></span> Production mindset</div>
-                </div>
-
-                <div class="skills-grid">
-                    <div class="skill-group">
-                        <div class="skill-group-head"><i class="fa fa-code"></i><span>Programming</span></div>
-                        <div class="skill-chip" data-level="90"><b>Java</b><em>90%</em><span class="skill-track"><i></i></span></div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-group-head"><i class="fa fa-cubes"></i><span>Backend &amp; Frameworks</span></div>
-                        <div class="skill-chip" data-level="90"><b>Spring Boot</b><em>90%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="80"><b>Spring Security</b><em>80%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="80"><b>Spring MVC</b><em>80%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="70"><b>Spring WebFlux</b><em>70%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="80"><b>JUnit</b><em>80%</em><span class="skill-track"><i></i></span></div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-group-head"><i class="fa fa-globe"></i><span>Frontend</span></div>
-                        <div class="skill-chip" data-level="80"><b>HTML</b><em>80%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="60"><b>JavaScript</b><em>60%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="40"><b>React.js</b><em>40%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="30"><b>CSS</b><em>30%</em><span class="skill-track"><i></i></span></div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-group-head"><i class="fa fa-database"></i><span>Databases</span></div>
-                        <div class="skill-chip" data-level="90"><b>MySQL</b><em>90%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="80"><b>PostgreSQL</b><em>80%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="75"><b>Oracle DB</b><em>75%</em><span class="skill-track"><i></i></span></div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-group-head"><i class="fa fa-cloud"></i><span>Architecture &amp; APIs</span></div>
-                        <div class="skill-chip" data-level="85"><b>Microservices</b><em>85%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="85"><b>REST API</b><em>85%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="75"><b>Apache Kafka</b><em>75%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="50"><b>GraphQL</b><em>50%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="65"><b>Docker &amp; Kubernetes</b><em>65%</em><span class="skill-track"><i></i></span></div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-group-head"><i class="fa fa-wrench"></i><span>Tools &amp; AI</span></div>
-                        <div class="skill-chip" data-level="90"><b>IntelliJ IDEA</b><em>90%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="90"><b>Postman</b><em>90%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="80"><b>Git</b><em>80%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip" data-level="70"><b>GitHub</b><em>70%</em><span class="skill-track"><i></i></span></div>
-                        <div class="skill-chip ai-skill" data-level="70"><b><i class="fa fa-bolt"></i> Claude Code</b><em>70%</em><span class="skill-track"><i></i></span></div>
-                    </div>
-                </div>
-
-                <div class="skills-footer">
-                    <span><i class="fa fa-check-circle"></i> Clean code</span>
-                    <span><i class="fa fa-shield"></i> Security-minded</span>
-                    <span><i class="fa fa-flask"></i> Test-driven</span>
-                    <span><i class="fa fa-rocket"></i> Delivery-focused</span>
-                </div>
-            </div>
-        </div>
+      <h3 class="sub">Public work</h3>
+      <ul class="repos">
+        <li>
+          <a href="https://nitesh401.github.io/TheBlueprintVoyager/" target="_blank" rel="noopener noreferrer">
+            <span class="repos__t">TheBlueprintVoyager</span>
+            <span class="repos__d">Entries on Java design patterns, Spring Boot internals, microservice patterns, Kafka and system-design case studies, written for five-minutes-at-a-time reading.</span>
+            <span class="repos__go" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/nitesh401/Open-Meteo" target="_blank" rel="noopener noreferrer">
+            <span class="repos__t">Open-Meteo</span>
+            <span class="repos__d">Spring Boot sample that resolves a place to coordinates, fetches current weather, enriches it and stores it in H2.</span>
+            <span class="repos__go" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/nitesh401/RMS" target="_blank" rel="noopener noreferrer">
+            <span class="repos__t">Healthcare Rules Management System</span>
+            <span class="repos__d">Upload rules from an Excel file, then query and manage them. Spring Boot, H2, JUnit, Maven.</span>
+            <span class="repos__go" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
     </section>
 
+    <!-- ============ 05 · FIND ME ============ -->
+    <section class="sec sec--find" id="find" aria-labelledby="find-h">
+      <p class="kicker">05 / Find me</p>
+      <h2 id="find-h" class="status"><span class="status__code">200</span><span class="status__ok">OK</span><span class="sr-only">Let's connect</span></h2>
+      <p class="lede">Say hello, or follow the code.</p>
 
+      <ul class="links">
+        <li><a href="https://github.com/nitesh401" target="_blank" rel="noopener noreferrer"><span>GitHub</span><em>github.com/nitesh401</em><i aria-hidden="true">↗</i></a></li>
+        <li><a href="https://www.linkedin.com/in/nitesh-rawal-50923b199/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><em>nitesh-rawal</em><i aria-hidden="true">↗</i></a></li>
+        <li><a href="mailto:nitesh.rawal401@gmail.com"><span>Email</span><em>nitesh.rawal401@gmail.com</em><i aria-hidden="true">↗</i></a></li>
+      </ul>
 
-<!--==========================================
-         BLOG
-===========================================-->
-<section id="blog" class="section">
-    <div class="container">
-        <!-- SECTION TITLE -->
-        <div class="section-title">
-            <h4 class="text-uppercase text-center"><i class="title-icon fa fa-pencil-square"></i>Projects</h4>
-        </div>
-        <div id="blog-card" class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="card">
+      <p class="more">Looking for the detailed career view? <a href="https://nitesh-rawal.is-a.dev/" target="_blank" rel="noopener noreferrer">nitesh-rawal.is-a.dev</a></p>
 
-                    <div class="project-section-heading">
-                        <span>Selected delivery</span>
-                        <h6>Professional / Work Projects</h6>
-                        <p>Systems built for scale, reliability, and regulated enterprise workflows.</p>
-                    </div>
-
-                    <!--BLOG ODD - Entitlement Management System (Deloitte USI)-->
-                    <div class="blog odd reveal work-project">
-                        <div class="image proj-cover">
-                            <img alt="Entitlement Management System dashboard illustration" src="images/project-entitlement.svg" loading="lazy" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="content">
-                            <ol class="breadcrumb">
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">Spring Boot</a></li>
-                                <li><a href="#">Microservices</a></li>
-                                <li><a href="#">AWS SQS</a></li>
-                                <li><a href="#">ORACLE DB</a></li>
-                            </ol>
-                            <h6>Entitlement Management System <small style="opacity:0.6;">— Deloitte USI</small></h6>
-                            <p>
-                                Scalable microservices platform for role-based access control, licensing lifecycle
-                                management, and fulfillment workflows, built to support millions of entitlements with
-                                event sourcing for audit compliance. Handles 100K+ events/day via an event logging
-                                service with schema versioning and TTL-based retention.
-                            </p>
-                            <span style="opacity:0.7;"><i class="fa fa-lock"></i> Enterprise project — code is proprietary to Deloitte USI</span>
-                        </div>
-                    </div>
-
-                    <!--BLOG EVEN - Credit Studio (CGI)-->
-                    <div class="blog even reveal work-project">
-                        <div class="image proj-cover">
-                            <img alt="Credit Studio microservices architecture illustration" src="images/project-credit-studio.svg" loading="lazy" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="content">
-                            <ol class="breadcrumb">
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">Spring Boot</a></li>
-                                <li><a href="#">Microservices</a></li>
-                                <li><a href="#">Apache Kafka</a></li>
-                                <li><a href="#">Camunda BPM</a></li>
-                            </ol>
-                            <h6>Credit Studio <small style="opacity:0.6;">— CGI</small></h6>
-                            <p>
-                                Enterprise-grade credit management suite of 120+ microservices for major US/UK banking
-                                and insurance institutions, architected to handle 5K req/sec at sub-500ms P99 latency.
-                                Used Camunda BPM to orchestrate multi-step credit approval workflows with business-level
-                                process visibility.
-                            </p>
-                            <span style="opacity:0.7;"><i class="fa fa-lock"></i> Enterprise project — code is proprietary to CGI's banking client</span>
-                        </div>
-                    </div>
-
-                    <!--BLOG ODD - Tasheer Saudi Visa & Travel Solution (Techsophy)-->
-                    <div class="blog odd reveal work-project">
-                        <div class="image proj-cover">
-                            <img alt="Tasheer Saudi visa and travel platform illustration" src="images/project-tasheer-visa.svg" loading="lazy" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="content">
-                            <ol class="breadcrumb">
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">Spring Boot</a></li>
-                                <li><a href="#">Microservices</a></li>
-                                <li><a href="#">Apache Kafka</a></li>
-                                <li><a href="#">MySQL / PostgreSQL</a></li>
-                            </ol>
-                            <h6>Tasheer — Saudi Visa & Travel Solution <small style="opacity:0.6;">— Techsophy</small></h6>
-                            <p>
-                                Multi-tenant microservices platform for Tasheer, a Saudi visa processing and travel
-                                solution, with separate portals for customers, agents, centers, and admin staff,
-                                supporting 500+ concurrent users with sub-second response times. Implemented
-                                cursor-based pagination, batch processing, and validation logic for 120+
-                                nationality-specific rules.
-                            </p>
-                            <span style="opacity:0.7;"><i class="fa fa-lock"></i> Enterprise project — code is proprietary to Techsophy's visa client</span>
-                        </div>
-                    </div>
-
-                    <div class="project-section-heading personal-project-heading">
-                        <span>Built independently</span>
-                        <h6>Personal Projects</h6>
-                        <p>Hands-on products exploring full-stack development, rules engines, and applied AI.</p>
-                    </div>
-
-                    <!--BLOG ODD-->
-                    <div class="blog odd reveal personal-project">
-                        <div class="image proj-cover">
-                            <img alt="Open-Meteo weather app illustration" src="images/wheatherapp.png" loading="lazy"  />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="content">
-                            <ol class="breadcrumb">
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">Spring Boot</a></li>
-                                <li class="active"><a href="#">Open-Meteo</a></li>
-                                <li class="active"><a href="#">H2 Database</a></li>
-                                <li class="active"><a href="#">Bootstrap</a></li>
-                            </ol>
-                            <h6>Open-Meteo <small style="opacity:0.6;">— learningdev</small></h6>
-                            <p>
-                                <span>Open-Meteo</span> is a Spring Boot sample that resolves a location to coordinates,
-                                fetches current weather from Open-Meteo, enriches the payload, and stores the result in an
-                                in-memory H2 database with a simple Bootstrap UI.
-                            </p>
-                            <a href="https://github.com/nitesh401/Open-Meteo" target="_blank" rel="noopener noreferrer">
-                                <span class="fa fa-github"></span> Github link</a>
-                        </div>
-                    </div>
-
-                    <!--BLOG EVEN-->
-                    <div class="blog even reveal personal-project">
-                        <div class="image proj-cover">
-                            <img alt="Healthcare Rules Management System illustration" src="images/p2.jpg" loading="lazy" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="content">
-                            <ol class="breadcrumb">
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">Spring Boot</a></li>
-                                <li><a href="#">H2 DB</a></li>
-                                <li><a href="#">Junit</a></li>
-                                <li><a href="#">Maven</a></li>
-                            </ol>
-                            <h6>Healthcare Rules Management System</h6>
-                            <p>
-                                <span>Healthcare Rules Management System</span> where rules can be uploaded from an
-                                Excel file, and various operations can be performed to retrieve and manage rules.
-                            </p>
-                            <a href="https://github.com/nitesh401/RMS" target="_blank" rel="noopener noreferrer">
-                                <span class="fa fa-github"></span> Github link</a>
-                        </div>
-                    </div>
-
-                    <!--BLOG ODD-->
-                    <div class="blog odd reveal personal-project">
-                        <div class="image proj-cover">
-                            <img alt="Isolation AI Game Agent gameplay demo" src="images/viz.gif" loading="lazy" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="content">
-                            <ol class="breadcrumb">
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">Java AWT & Spring</a></li>
-                                <li><a href="#">Alpha-Beta Pruning</a></li>
-                                <li><a href="#">Iterative Deepening Search</a></li>
-                                <li><a href="#">MiniMax</a></li>
-                            </ol>
-                            <h6>Isolation AI Game Agent</h6>
-                            <p>
-                                Isolation is a deterministic, two-player game of perfect information in which
-                                the players alternate turns moving a single piece from one cell to another on
-                                a board. Whenever either player occupies a cell, that cell becomes blocked
-                                for the remainder of the game. The first player with no remaining legal
-                                moves loses, and the opponent is declared the winner.
-                            </p>
-                            <a href="https://github.com/nitesh401/IsolationAIgameAgent" target="_blank" rel="noopener noreferrer">
-                                <span class="fa fa-github"></span> Github link</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-    <!--==========================================
-              AI-ASSISTED DEVELOPMENT
-===========================================-->
-    <section id="portfolios" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-uppercase text-center"><i class="title-icon fa fa-bolt"></i>AI-Assisted Development</h4>
-            </div>
-
-            <div id="ai-dev-card" class="card reveal interactive-lift">
-                <div class="card-content">
-                    <h5 class="text-uppercase" style="color:#fff;">Engineering faster with AI, without compromising quality</h5>
-                    <p>
-                        I actively use <strong>Claude Code</strong> and <strong>GitHub Copilot</strong> as AI-assisted development tools to accelerate delivery, reduce repetitive engineering work, and move faster from technical design to production-ready implementation.
-                    </p>
-                    <p>
-                        I have hands-on experience running POCs with Claude Code and creating project-specific <strong>.skill</strong> definitions that capture reusable project context, conventions, workflows, and engineering guidance. This enables AI-assisted development to work with the needs of a specific codebase rather than relying only on generic prompts.
-                    </p>
-                    <p>
-                        I can quickly adapt AI-assisted development to different kinds of engineering work — technical analysis and design, implementation, debugging, refactoring, testing, documentation, and delivery — while keeping ownership of architecture, code quality, security, maintainability, and production readiness.
-                    </p>
-
-                    <div class="ai-grid">
-                        <div class="ai-pill">
-                            <i class="fa fa-terminal"></i>
-                            <strong>Claude Code</strong>
-                            <span>POCs, agentic development workflows and project-specific .skill creation.</span>
-                        </div>
-                        <div class="ai-pill">
-                            <i class="fa fa-github"></i>
-                            <strong>GitHub Copilot</strong>
-                            <span>Faster implementation, exploration, refactoring and developer productivity.</span>
-                        </div>
-                        <div class="ai-pill">
-                            <i class="fa fa-check-circle"></i>
-                            <strong>Production Quality</strong>
-                            <span>AI accelerates delivery while engineering judgement, testing and quality gates remain human-owned.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <footer class="foot">
+        <code>$ curl -I niteshrawal.is-a.dev</code>
+        <code class="foot__r">HTTP/2 200 · Nitesh Rawal</code>
+      </footer>
     </section>
+  </main>
 
-
-    <!--==========================================
-                  HOBBIES
-===========================================-->
-    <section id="interest" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-uppercase text-center"><i class="title-icon fa fa-heart"></i>Hobbies</h4>
-                <p class="skills-subtitle">What keeps me active, competitive and curious outside of work.</p>
-            </div>
-
-            <div id="interest-card" class="hobbies-dashboard reveal">
-                <div class="hobby-spotlight"></div>
-                <div class="hobbies-intro">
-                    <div class="hobby-quote">"Discipline in the gym. Competition on the field. Curiosity everywhere."</div>
-                </div>
-                <div class="hobby-grid">
-                    <div class="hobby-item featured"><div class="hobby-tile"><div class="hobby-icon"><i class="fa fa-anchor"></i></div><strong>Gym</strong><span>Fitness &amp; strength training</span><b>MY FAVOURITE</b></div></div>
-                    <div class="hobby-item featured"><div class="hobby-tile"><div class="hobby-icon"><i class="fa fa-trophy"></i></div><strong>Cricket</strong><span>Playing &amp; following the game</span><b>MY FAVOURITE</b></div></div>
-                    <div class="hobby-item"><div class="hobby-tile"><div class="hobby-icon"><i class="fa fa-plane"></i></div><strong>Travelling</strong><span>Exploring new places</span></div></div>
-                    <div class="hobby-item"><div class="hobby-tile"><div class="hobby-icon"><i class="fa fa-music"></i></div><strong>Music</strong><span>Listening &amp; discovering</span></div></div>
-                    <div class="hobby-item"><div class="hobby-tile"><div class="hobby-icon"><i class="fa fa-film"></i></div><strong>Web Series</strong><span>Movies &amp; web series</span></div></div>
-                    <div class="hobby-item"><div class="hobby-tile"><div class="hobby-icon"><i class="fa fa-gamepad"></i></div><strong>Gaming</strong><span>Casual gaming &amp; fun</span></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!--==========================================
-                  CONTACT
-===========================================-->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-uppercase text-center"><i class="title-icon fa fa-envelope"></i>Contact Me</h4>
-            </div>
-
-            <div class="row">
-                <div id="contact-card" class="col-md-7 col-sm-12 col-xs-12 reveal">
-                    <div class="card">
-                        <div class="card-content">
-                            <h5 style="color:#fff; margin-top:0;">Let's build something useful</h5>
-                            <p style="opacity:.78;">Have a project, technical discussion, collaboration idea, or just want to connect? Send me a message.</p>
-
-                            <form id="contact-form" name="c-form">
-                                <div class="input-field">
-                                    <input id="first_name" type="text" class="validate" name="name" required>
-                                    <label for="first_name">Name</label>
-                                </div>
-
-                                <div class="input-field">
-                                    <input id="email" type="email" class="validate" name="email" required>
-                                    <label for="email">Email</label>
-                                </div>
-
-                                <div class="input-field">
-                                    <input id="sub" type="text" class="validate" name="subject" required>
-                                    <label for="sub">Subject</label>
-                                </div>
-
-                                <div class="input-field">
-                                    <textarea id="textarea1" class="materialize-textarea" name="message" required></textarea>
-                                    <label for="textarea1">Message</label>
-                                </div>
-
-                                <div class="contact-send">
-                                    <button id="submit" name="contactSubmit" type="submit" class="btn waves-effect">
-                                        <i class="fa fa-paper-plane"></i>&nbsp; Send Message
-                                    </button>
-                                </div>
-
-                                <div id="contact-status" class="contact-status"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-5 col-sm-12 col-xs-12 reveal">
-                    <div class="contact-side">
-                        <h5>Connect with me</h5>
-                        <p>I'm always open to meaningful conversations around backend engineering, distributed systems, AI-assisted development and technology.</p>
-
-                        <div class="contact-method">
-                            <i class="fa fa-envelope"></i>
-                            <div><small>Email</small><br><a href="mailto:nitesh.rawal401@gmail.com">nitesh.rawal401@gmail.com</a></div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fa fa-linkedin"></i>
-                            <div><small>LinkedIn</small><br><a href="https://www.linkedin.com/in/nitesh-rawal-50923b199/" target="_blank" rel="noopener">linkedin.com/in/nitesh-rawal</a></div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fa fa-github"></i>
-                            <div><small>GitHub</small><br><a href="https://github.com/nitesh401" target="_blank" rel="noopener">github.com/nitesh401</a></div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fa fa-map-marker"></i>
-                            <div><small>Location</small><br><span>Hyderabad, Telangana, India</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!--SCROLL TO TOP-->
-    <div id="scroll-top">
-        <div id="scrollup"><i class="fa fa-angle-up"></i></div>
-    </div>
-
-    <!--==========================================
-                      FOOTER
-===========================================-->
-
-    <footer>
-        <div class="container">
-            <!--FOOTER DETAILS-->
-            <p class="text-center">
-                © Nitesh Rawal 2026
-            </p>
-        </div>
-    </footer>
-
-    <!-- ================== SCRIPTS ================== -->
-    <script src="javascript/jquery-2.1.3.min.js"></script>
-    <script src="javascript/bootstrap.min.js"></script>
-    <script src="javascript/materialize.min.js"></script>
-    <script src="javascript/markerwithlabel.min.js"></script>
-    <script src="javascript/retina.min.js"></script>
-    <script src="javascript/scrollreveal.min.js"></script>
-    <script src="javascript/jquery.touchSwipe.min.js"></script>
-    <script src="javascript/custom.js"></script>
-    <script type="module" src="javascript/motion.js"></script>
-
-    <!-- ================== ENHANCED INTERACTION SCRIPT ================== -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            // Interactive Skills card
-            var skillsCard = document.getElementById("skills-card");
-            if (skillsCard) {
-                skillsCard.addEventListener("mousemove", function (e) {
-                    var r = skillsCard.getBoundingClientRect();
-                    var x = e.clientX - r.left;
-                    var y = e.clientY - r.top;
-                    var rx = ((y - r.height / 2) / (r.height / 2)) * -1.4;
-                    var ry = ((x - r.width / 2) / (r.width / 2)) * 1.4;
-                    skillsCard.style.transform =
-                        "perspective(1400px) rotateX(" + rx + "deg) rotateY(" + ry + "deg)";
-                    skillsCard.style.setProperty("--skill-mouse-x", x + "px");
-                    skillsCard.style.setProperty("--skill-mouse-y", y + "px");
-                });
-                skillsCard.addEventListener("mouseleave", function () {
-                    skillsCard.style.transform =
-                        "perspective(1400px) rotateX(0deg) rotateY(0deg)";
-                });
-            }
-
-
-            document.documentElement.classList.add("js-reveal");
-
-            /* FIX: force the social icons to stay visible/clickable even if
-               the theme's scrollreveal.min.js / custom.js sets inline
-               opacity/visibility on them (belt-and-braces alongside the
-               CSS !important rule above). */
-            document.querySelectorAll("#v-card .links, #v-card .links .social").forEach(function (el) {
-                el.style.removeProperty("opacity");
-                el.style.removeProperty("visibility");
-                el.style.removeProperty("transform");
-                el.style.opacity = "1";
-                el.style.visibility = "visible";
-                el.style.pointerEvents = "auto";
-            });
-
-            /* Scroll reveal */
-            var revealEls = document.querySelectorAll(".reveal");
-            if ("IntersectionObserver" in window) {
-                var revealObserver = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("active");
-                        }
-                    });
-                }, { threshold: 0.12 });
-                revealEls.forEach(function (el) { revealObserver.observe(el); });
-            } else {
-                revealEls.forEach(function (el) { el.classList.add("active"); });
-            }
-
-            /* Typewriter */
-            var typewriterEl = document.getElementById("typewriter-heading");
-            var cursorEl = document.querySelector(".typewriter-cursor");
-            if (typewriterEl) {
-                var fullText = "Know more about myself";
-                var i = 0;
-                var started = false;
-                function typeNext() {
-                    if (i <= fullText.length) {
-                        typewriterEl.textContent = fullText.slice(0, i++);
-                        setTimeout(typeNext, 65);
-                    } else {
-                        // typing finished — hide the cursor gracefully
-                        if (cursorEl) {
-                            cursorEl.style.transition = 'opacity 240ms ease';
-                            cursorEl.style.opacity = '0';
-                            setTimeout(function(){ if(cursorEl) cursorEl.style.display = 'none'; }, 260);
-                        }
-                    }
-                }
-                if ("IntersectionObserver" in window) {
-                    var twObs = new IntersectionObserver(function(entries, obs) {
-                        if (entries[0].isIntersecting && !started) {
-                            started = true; typeNext(); obs.disconnect();
-                        }
-                    }, {threshold:.5});
-                    twObs.observe(typewriterEl);
-                } else { typeNext(); }
-
-            /* Status line typewriter (cycles phrases) */
-            var statusEl = document.getElementById('status-typewriter');
-            var statusCursor = document.getElementById('status-cursor');
-            if (statusEl) {
-                var phrases = ["Java Backend Developer","Spring Boot & Microservices","01101010 01100001 01110110 01100001"];
-                var pIndex = 0, chIndex = 0, deleting = false;
-                function statusTick(){
-                    var current = phrases[pIndex];
-                    if (!deleting) {
-                        statusEl.textContent = current.slice(0, ++chIndex);
-                        if (chIndex === current.length) { deleting = true; setTimeout(statusTick, 900); return; }
-                        setTimeout(statusTick, 90);
-                    } else {
-                        statusEl.textContent = current.slice(0, --chIndex);
-                        if (chIndex === 0) { deleting = false; pIndex = (pIndex+1)%phrases.length; setTimeout(statusTick, 350); return; }
-                        setTimeout(statusTick, 45);
-                    }
-                }
-                // start when v-card is visible (same pattern as other observers)
-                if ("IntersectionObserver" in window) {
-                    var stObs = new IntersectionObserver(function(entries, obs){
-                        if (entries[0].isIntersecting) { statusTick(); obs.disconnect(); }
-                    }, {threshold: 0.2});
-                    stObs.observe(document.getElementById('v-card'));
-                } else { statusTick(); }
-            }
-
-            }
-
-            /* Final Skills + Hobbies interactions */
-            var finalSkills=document.getElementById("skills-card");
-            if(finalSkills){
-                finalSkills.querySelectorAll(".skill-chip").forEach(function(chip){ chip.style.setProperty("--level", chip.getAttribute("data-level") || 0); });
-                finalSkills.addEventListener("mousemove",function(e){var r=finalSkills.getBoundingClientRect();finalSkills.style.setProperty("--skill-x",(e.clientX-r.left)+"px");finalSkills.style.setProperty("--skill-y",(e.clientY-r.top)+"px");});
-            }
-            var finalHobbies=document.getElementById("interest-card");
-            if(finalHobbies){
-                finalHobbies.addEventListener("mousemove",function(e){var r=finalHobbies.getBoundingClientRect();finalHobbies.style.setProperty("--hobby-x",(e.clientX-r.left)+"px");finalHobbies.style.setProperty("--hobby-y",(e.clientY-r.top)+"px");});
-                finalHobbies.querySelectorAll(".hobby-tile").forEach(function(tile){tile.addEventListener("mousemove",function(e){var r=tile.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tile.style.transform="perspective(800px) rotateX("+(-y*3.5)+"deg) rotateY("+(x*3.5)+"deg) translateY(-4px) scale(1.01)";});tile.addEventListener("mouseleave",function(){tile.style.transform="";});});
-            }
-
-            /* Skills viewport state */
-            var skillsCard = document.getElementById("skills-card");
-            if (skillsCard && "IntersectionObserver" in window) {
-                var skillsObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) { skillsCard.classList.toggle("in-view", entry.isIntersecting); });
-                }, {threshold:.2});
-                skillsObserver.observe(skillsCard);
-            }
-
-            /* Smooth navigation */
-            document.querySelectorAll('#menu-options a[href^="#"]').forEach(function(link) {
-                link.addEventListener("click", function(e) {
-                    var target = document.getElementById(link.getAttribute("href").slice(1));
-                    if (!target) return;
-                    e.preventDefault();
-                    target.scrollIntoView({behavior:"smooth", block:"start"});
-                    target.classList.remove("nav-highlight");
-                    void target.offsetWidth;
-                    target.classList.add("nav-highlight");
-                    setTimeout(function(){ target.classList.remove("nav-highlight"); }, 1000);
-                });
-            });
-
-            /* Scroll progress */
-            var progress = document.querySelector("#scroll-progress span");
-            function updateProgress() {
-                var max = document.documentElement.scrollHeight - window.innerHeight;
-                progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
-            }
-            window.addEventListener("scroll", updateProgress, {passive:true});
-            updateProgress();
-
-            /* Mouse system */
-            var dot = document.getElementById("mouse-dot");
-            var ring = document.getElementById("mouse-ring");
-            var glow = document.querySelector(".cursor-glow");
-            var mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
-            var ringX = mouseX, ringY = mouseY;
-            var pointerFine = window.matchMedia("(pointer:fine)").matches && !window.matchMedia('(max-width: 991px)').matches;
-            var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            var rafId = null;
-            var mouseMoveHandler = null;
-
-            // Ensure cursor elements exist (safe fallback)
-            if (!dot) { dot = document.createElement('div'); dot.id = 'mouse-dot'; document.body.appendChild(dot); }
-            if (!ring) { ring = document.createElement('div'); ring.id = 'mouse-ring'; document.body.appendChild(ring); }
-
-            if (pointerFine && !prefersReduce) document.body.classList.add("pointer-ready");
-
-            /* Subtle cursor glow that follows the pointer (dot + ring) */
-            function animateCursor() {
-                ringX += (mouseX - ringX) * 0.12; // softer follow
-                ringY += (mouseY - ringY) * 0.12;
-                if (dot) {
-                    dot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%,-50%)';
-                    dot.style.opacity = 1;
-                }
-                if (ring) {
-                    ring.style.transform = 'translate3d(' + ringX + 'px,' + ringY + 'px,0) translate(-50%,-50%)';
-                    ring.style.opacity = 1;
-                }
-                rafId = requestAnimationFrame(animateCursor);
-            }
-
-            if (pointerFine && !prefersReduce) {
-                // mousemove handler updates coordinates only; animation uses rAF
-                mouseMoveHandler = function(e) {
-                    mouseX = e.clientX; mouseY = e.clientY;
-                    if (glow) {
-                        glow.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%,-50%)';
-                        glow.style.opacity = 1;
-                    }
-                };
-                document.addEventListener("mousemove", mouseMoveHandler, {passive:true});
-
-                // lightweight hover class toggles
-                document.querySelectorAll("a, button, .social").forEach(function(el){
-                    el.addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover");});
-                    el.addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover");});
-                });
-
-                // start the rAF loop
-                if (!rafId) animateCursor();
-
-                // cleanup when page hides to avoid leaking rAF/listeners
-                window.addEventListener('pagehide', function(){ if (rafId) { cancelAnimationFrame(rafId); rafId = null; } document.removeEventListener('mousemove', mouseMoveHandler); if (glow) glow.style.opacity = 0; if (dot) dot.style.opacity = 0; if (ring) ring.style.opacity = 0; });
-            } else {
-                // disable cursor on touch or reduced-motion
-                if (dot) dot.style.display = 'none';
-                if (ring) ring.style.display = 'none';
-                if (glow) glow.style.display = 'none';
-            }
-
-            /* Generic 3D tilt on selected cards */
-            if (pointerFine) {
-                document.querySelectorAll(".interactive-lift").forEach(function(card) {
-                    card.addEventListener("mousemove", function(e) {
-                        var r=card.getBoundingClientRect();
-                        var x=(e.clientX-r.left)/r.width-.5;
-                        var y=(e.clientY-r.top)/r.height-.5;
-                        card.style.transform="perspective(1100px) rotateX("+(-y*3.2)+"deg) rotateY("+(x*3.2)+"deg) translateY(-2px)";
-                    });
-                    card.addEventListener("mouseleave", function(){ card.style.transform=""; });
-                });
-            }
-
-            /* AI card cursor glow */
-            var aiCard=document.getElementById("ai-dev-card");
-            if (aiCard && pointerFine) {
-                aiCard.addEventListener("mousemove",function(e){
-                    var r=aiCard.getBoundingClientRect();
-                    aiCard.style.setProperty("--ai-x",(e.clientX-r.left)+"px");
-                    aiCard.style.setProperty("--ai-y",(e.clientY-r.top)+"px");
-                });
-            }
-
-            /* Hobby 3D tiles + cursor-following glow */
-            var hobbyCard=document.getElementById("interest-card");
-            if (hobbyCard && pointerFine) {
-                hobbyCard.addEventListener("mousemove",function(e){
-                    var r=hobbyCard.getBoundingClientRect();
-                    var x=e.clientX-r.left, y=e.clientY-r.top;
-                    hobbyCard.style.setProperty("--hobby-x",x+"px");
-                    hobbyCard.style.setProperty("--hobby-y",y+"px");
-                });
-                hobbyCard.querySelectorAll(".hobby-tile").forEach(function(tile){
-                    tile.addEventListener("mousemove",function(e){
-                        var r=tile.getBoundingClientRect();
-                        var x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-                        tile.style.transform="perspective(700px) rotateX("+(-y*3.5)+"deg) rotateY("+(x*3.5)+"deg) translateY(-4px)";
-                    });
-                    tile.addEventListener("mouseleave",function(){tile.style.transform="";});
-                });
-            }
-
-            /* Hobby 3D mouse interaction */
-            document.querySelectorAll(".hobby-item").forEach(function(item){
-                item.addEventListener("mousemove",function(e){
-                    var r=item.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
-                    var rx=((y-r.height/2)/(r.height/2))*-7, ry=((x-r.width/2)/(r.width/2))*7;
-                    item.querySelector(".hobby-tile").style.transform="perspective(900px) rotateX("+rx+"deg) rotateY("+ry+"deg) translateY(-6px) scale(1.03)";
-                    var card=document.getElementById("interest-card");
-                    if(card){ card.style.setProperty("--hobby-x",(e.clientX-card.getBoundingClientRect().left)+"px"); card.style.setProperty("--hobby-y",(e.clientY-card.getBoundingClientRect().top)+"px"); }
-                });
-                item.addEventListener("mouseleave",function(){ item.querySelector(".hobby-tile").style.transform="perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)"; });
-            });
-
-            /* Contact form: GitHub Pages-safe Formspree integration (replace FORM_ID) */
-            var form=document.getElementById("contact-form");
-            var status=document.getElementById("contact-status");
-            var submit=document.getElementById("submit");
-            // Replace with your Formspree endpoint: https://formspree.io/f/{your-id}
-            var FORMSPREE_ENDPOINT = "https://formspree.io/f/xvkgpwrl";
-            if (form) {
-                form.addEventListener("submit",function(e){
-                    e.preventDefault();
-                    var name=document.getElementById("first_name").value.trim();
-                    var email=document.getElementById("email").value.trim();
-                    var subject=document.getElementById("sub").value.trim();
-                    var message=document.getElementById("textarea1").value.trim();
-                    if (!name || !email || !subject || !message) return;
-
-                    submit.setAttribute('disabled','disabled');
-                    status.className = "contact-status";
-                    status.style.display = "block";
-                    status.innerHTML = "Sending message...";
-
-                    fetch(FORMSPREE_ENDPOINT, {
-                        method: 'POST',
-                        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ name: name, email: email, subject: subject, message: message })
-                    }).then(function(resp){
-                        if (resp.ok) {
-                            status.className = "contact-status";
-                            status.style.display = "block";
-                            status.innerHTML = "Thanks — your message was sent. I'll reply to you at " + (email) + ".";
-                            submit.innerHTML = '<i class="fa fa-check"></i>&nbsp; Sent';
-                            setTimeout(function(){ submit.innerHTML = '<i class="fa fa-paper-plane"></i>&nbsp; Send Message'; submit.removeAttribute('disabled'); }, 2200);
-                            form.reset();
-                        } else {
-                            return resp.json().then(function(data){ throw new Error(data.error || 'Send failed'); });
-                        }
-                    }).catch(function(err){
-                        status.className = "contact-status error";
-                        status.style.display = "block";
-                        status.innerHTML = "Sorry — we couldn't send your message. Please email me at <a href=\"mailto:nitesh.rawal401@gmail.com\">nitesh.rawal401@gmail.com</a> (or check the Formspree form id).";
-                        submit.removeAttribute('disabled');
-                    });
-                });
-            }
-
-            /* Click ripple */
-            document.addEventListener("click",function(e){
-                var target=e.target.closest("a,button");
-                if(!target) return;
-                var ripple=document.createElement("span");
-                ripple.className="click-ripple";
-                var r=target.getBoundingClientRect();
-                ripple.style.left=(e.clientX-r.left)+"px";
-                ripple.style.top=(e.clientY-r.top)+"px";
-                target.style.position="relative";
-                target.style.overflow="hidden";
-                target.appendChild(ripple);
-                setTimeout(function(){ripple.remove();},650);
-            });
-
-            /* Premium background mouse parallax: slower, subtler movement */
-            var ambientBg=document.getElementById("ambient-bg");
-            if(ambientBg && pointerFine){
-                var bgTargetX=50,bgTargetY=45,bgX=50,bgY=45;
-                window.addEventListener("mousemove",function(e){ bgTargetX=(e.clientX/window.innerWidth)*100; bgTargetY=(e.clientY/window.innerHeight)*100; });
-                function animateBg(){
-                    bgX += (bgTargetX-bgX)*0.02; bgY += (bgTargetY-bgY)*0.02; // slower easing
-                    ambientBg.style.setProperty("--bg-mx",bgX+"%");
-                    ambientBg.style.setProperty("--bg-my",bgY+"%");
-                    requestAnimationFrame(animateBg);
-                }
-                animateBg();
-            }
-
-            /* Lightweight particle constellation background */
-            var canvas=document.getElementById("particle-canvas");
-            if (canvas && pointerFine && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-                var ctx=canvas.getContext("2d"), particles=[], mouseX=innerWidth/2, mouseY=innerHeight/2, count=Math.min(115,Math.floor(window.innerWidth/14));
-                function resizeCanvas(){canvas.width=window.innerWidth*devicePixelRatio;canvas.height=window.innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);}
-                resizeCanvas(); window.addEventListener("resize",resizeCanvas); window.addEventListener("mousemove",function(e){mouseX=e.clientX;mouseY=e.clientY;});
-                for(var p=0;p<count;p++) particles.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.16,vy:(Math.random()-.5)*.16,r:Math.random()*1.6+.4,phase:Math.random()*Math.PI*2});
-                function drawParticles(){
-                    ctx.clearRect(0,0,innerWidth,innerHeight);
-                    particles.forEach(function(a){
-                        // remove direct mouse attraction for a calmer field; particles drift on their own
-                        a.x+=a.vx; a.y+=a.vy; a.phase+=0.01;
-                        if(a.x<0||a.x>innerWidth)a.vx*=-1;
-                        if(a.y<0||a.y>innerHeight)a.vy*=-1;
-                        ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,Math.PI*2);ctx.fillStyle="rgba(125,210,255,.55)";ctx.fill();
-                    });
-                    for(var i=0;i<particles.length;i++) for(var j=i+1;j<particles.length;j++){
-                        var dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
-                        if(d<135){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle="rgba(78,224,138,"+(0.10*(1-d/135))+ ")";ctx.lineWidth=.7;ctx.stroke();}
-                    }
-                    requestAnimationFrame(drawParticles);
-                }
-                drawParticles();
-            }
-        });
-    </script>
-
+  <script type="module" src="identity/identity.js"></script>
 </body>
-
 </html>
