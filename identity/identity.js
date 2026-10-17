@@ -152,6 +152,116 @@ if (hero && !reduce) {
   }, { passive: true });
 }
 
+/* ---------- mouse-driven smoke trail ---------- */
+(function smokeTrail() {
+  if (reduce || !matchMedia("(pointer:fine)").matches) return;
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+  canvas.className = "smoke-trail";
+  canvas.setAttribute("aria-hidden", "true");
+  document.body.appendChild(canvas);
+
+  const sprites = ["139,108,255", "198,255,61"].map((color) => {
+    const sprite = document.createElement("canvas");
+    sprite.width = sprite.height = 64;
+    const spriteCtx = sprite.getContext("2d");
+    if (!spriteCtx) return null;
+    const gradient = spriteCtx.createRadialGradient(32, 32, 1, 32, 32, 32);
+    gradient.addColorStop(0, `rgba(${color},0.32)`);
+    gradient.addColorStop(0.35, `rgba(${color},0.14)`);
+    gradient.addColorStop(1, `rgba(${color},0)`);
+    spriteCtx.fillStyle = gradient;
+    spriteCtx.fillRect(0, 0, 64, 64);
+    return sprite;
+  });
+  if (sprites.some((sprite) => !sprite)) {
+    canvas.remove();
+    return;
+  }
+
+  const maxParticles = (navigator.hardwareConcurrency || 8) <= 4 ? 70 : 120;
+  const particles = [];
+  let width = 0, height = 0, dpr = 1, raf = 0, last = 0;
+  let previousX = 0, previousY = 0, hasPrevious = false;
+
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function emit(x, y, dx, dy) {
+    const count = Math.min(8, Math.max(1, Math.ceil(Math.hypot(dx, dy) / 12)));
+    for (let i = 0; i < count && particles.length < maxParticles; i++) {
+      const spread = 8;
+      particles.push({
+        x: x + (Math.random() - 0.5) * spread,
+        y: y + (Math.random() - 0.5) * spread,
+        vx: -dx * 0.035 + (Math.random() - 0.5) * 0.7,
+        vy: -dy * 0.035 - 0.2 - Math.random() * 0.5,
+        life: 0.65 + Math.random() * 0.75,
+        age: 0,
+        size: 16 + Math.random() * 28,
+        sprite: Math.random() < 0.72 ? 0 : 1,
+      });
+    }
+    if (!raf) {
+      last = performance.now();
+      raf = requestAnimationFrame(frame);
+    }
+  }
+
+  function frame(now) {
+    const dt = Math.min(0.04, (now - last) / 1000 || 0.016);
+    last = now;
+    ctx.clearRect(0, 0, width, height);
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.age += dt;
+      if (p.age >= p.life) {
+        particles.splice(i, 1);
+        continue;
+      }
+      const step = dt * 60;
+      p.x += p.vx * step;
+      p.y += p.vy * step;
+      p.vx *= Math.pow(0.985, step);
+      p.vy -= 0.008 * step;
+      const progress = p.age / p.life;
+      const alpha = Math.sin(progress * Math.PI) * 0.52;
+      const size = p.size * (0.45 + progress * 1.1);
+      ctx.globalAlpha = alpha;
+      ctx.drawImage(sprites[p.sprite], p.x - size / 2, p.y - size / 2, size, size);
+    }
+    ctx.globalAlpha = 1;
+    if (particles.length) raf = requestAnimationFrame(frame);
+    else raf = 0;
+  }
+
+  addEventListener("resize", resize, { passive: true });
+  addEventListener("pointermove", (e) => {
+    if (e.pointerType !== "mouse") return;
+    const dx = hasPrevious ? e.clientX - previousX : 0;
+    const dy = hasPrevious ? e.clientY - previousY : 0;
+    previousX = e.clientX;
+    previousY = e.clientY;
+    hasPrevious = true;
+    emit(e.clientX, e.clientY, dx, dy);
+  }, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) return;
+    cancelAnimationFrame(raf);
+    raf = 0;
+    particles.length = 0;
+    ctx.clearRect(0, 0, width, height);
+  });
+  resize();
+})();
+
 /* ---------- single rAF-throttled scroll handler ---------- */
 const bar = $(".progress i");
 let ticking = false, pipeVisible = false;
